@@ -40,6 +40,7 @@
                 android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorTextCalculator"
                 android:textSize="40sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +60,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="setNumb"
                 android:text="1"
                 android:textSize="40sp" />
 
@@ -69,6 +71,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="2"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -78,6 +81,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="3"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -86,6 +90,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="sign"
                 android:text="+"
                 android:textSize="40sp" />
         </LinearLayout>
@@ -103,6 +108,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="4"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -112,6 +118,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="5"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -121,6 +128,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="6"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -129,6 +137,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="sign"
                 android:text="-"
                 android:textSize="40sp" />
         </LinearLayout>
@@ -146,6 +155,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="7"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -155,6 +165,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="8"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -164,6 +175,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="9"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -172,6 +184,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="sign"
                 android:text="*"
                 android:textSize="40sp" />
         </LinearLayout>
@@ -198,6 +211,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="0"
+                android:onClick="setNumb"
                 android:textSize="40sp" />
 
             <Button
@@ -215,6 +229,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="sign"
                 android:text="/"
                 android:textSize="40sp" />
         </LinearLayout>

@@ -13,9 +13,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button calculator = findViewById(R.id.btn_calc);
-        Button numeralsystems = findViewById(R.id.btn_numsys);
-        Button calcform = findViewById(R.id.btn_calcform);
+        Button calculator = (Button) findViewById(R.id.btn_calc);
+        Button numeralsystems = (Button) findViewById(R.id.btn_numsys);
+        Button calcform = (Button) findViewById(R.id.btn_calcform);
 
 
         calculator.setOnClickListener(new View.OnClickListener() {
@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
                 startActivity(intent);
-
             }
         });
     }
