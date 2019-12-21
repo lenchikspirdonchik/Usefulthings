@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Полезные вещи</string>
+    <string name="Button_calculator">Калькулятор</string>
+    <string name="buttonHexDec">системы счисления</string>
+    <string name="Button_calcFormula">расчет по формулам</string>
+</resources>
