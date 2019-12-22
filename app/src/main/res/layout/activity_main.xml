@@ -20,10 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
         android:layout_marginBottom="1dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,9 +48,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="@string/Button_calculator" />
+                android:background="@color/colorTexBackgroundtmain"
+                android:scrollbarSize="20dp"
+                android:text="@string/Button_calculator"
+                android:textColor="@color/colorTextmain"
+                android:textDirection="firstStrongRtl"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,9 +70,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="@string/buttonHexDec" />
+                android:background="@color/colorTexBackgroundtmain"
+                android:text="@string/buttonHexDec"
+                android:textColor="@color/colorTextmain"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -82,9 +90,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:text="@string/Button_calcFormula" />
+                android:background="@color/colorTexBackgroundtmain"
+                android:text="@string/Button_calcFormula"
+                android:textColor="@color/colorTextmain"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout

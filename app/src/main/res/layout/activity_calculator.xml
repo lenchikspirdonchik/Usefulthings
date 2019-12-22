@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+
     tools:context=".CalculatorActivity">
 
     <ImageView
@@ -31,21 +32,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextCalculator"
-                android:textSize="40sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -61,6 +72,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:text="1"
                 android:textSize="40sp" />
 
@@ -72,6 +84,7 @@
                 android:layout_weight="1"
                 android:text="2"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -82,6 +95,7 @@
                 android:layout_weight="1"
                 android:text="3"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -92,6 +106,7 @@
                 android:layout_weight="1"
                 android:onClick="sign"
                 android:text="+"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
         </LinearLayout>
 
@@ -109,6 +124,7 @@
                 android:layout_weight="1"
                 android:text="4"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -119,6 +135,7 @@
                 android:layout_weight="1"
                 android:text="5"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -129,6 +146,7 @@
                 android:layout_weight="1"
                 android:text="6"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -139,6 +157,7 @@
                 android:layout_weight="1"
                 android:onClick="sign"
                 android:text="-"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
         </LinearLayout>
 
@@ -156,6 +175,7 @@
                 android:layout_weight="1"
                 android:text="7"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -166,6 +186,7 @@
                 android:layout_weight="1"
                 android:text="8"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -175,6 +196,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="9"
+                android:background="@drawable/oval_button"
                 android:onClick="setNumb"
                 android:textSize="40sp" />
 
@@ -186,6 +208,7 @@
                 android:layout_weight="1"
                 android:onClick="sign"
                 android:text="*"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
         </LinearLayout>
 
@@ -202,6 +225,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="."
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -212,6 +236,7 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:onClick="setNumb"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -221,6 +246,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:text="="
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
 
             <Button
@@ -231,6 +257,7 @@
                 android:layout_weight="1"
                 android:onClick="sign"
                 android:text="/"
+                android:background="@drawable/oval_button"
                 android:textSize="40sp" />
         </LinearLayout>
     </LinearLayout>
