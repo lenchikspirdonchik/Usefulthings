@@ -49,6 +49,7 @@ public class CalculatorActivity extends AppCompatActivity {
                     txt.setText(String.valueOf(buffer));
                     break;
             }
+            setenablesign(true);
         }
     });
     }
@@ -61,7 +62,7 @@ public class CalculatorActivity extends AppCompatActivity {
         buff+=numb.getText().toString();
         //setenablesign(true);
     }
-//app:srcCompat="@drawable/calculatorscreen"
+
     public void sign(View view) {
         Button sign = (Button) view;
         signbuff = sign.getText().charAt(0);

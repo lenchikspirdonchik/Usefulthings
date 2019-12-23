@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/numsysscreen" />
+        app:srcCompat="@drawable/startscreen" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,10 +69,37 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/txtotvet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textColor="@color/colorvvodTextNumSys"
+                android:textSize="24sp"
+                android:textStyle="normal|italic" />
+
+            <TextView
+                android:id="@+id/txtbin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                android:textStyle="normal|italic" />
+
+            <TextView
+                android:id="@+id/txtoctal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="24sp"
+                android:textStyle="normal|italic" />
+
+            <TextView
+                android:id="@+id/txthex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp"
+                android:textStyle="normal|italic" />
+
         </LinearLayout>
 
         <LinearLayout
