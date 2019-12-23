@@ -61,7 +61,7 @@ public class CalculatorActivity extends AppCompatActivity {
         buff+=numb.getText().toString();
         //setenablesign(true);
     }
-
+//app:srcCompat="@drawable/calculatorscreen"
     public void sign(View view) {
         Button sign = (Button) view;
         signbuff = sign.getText().charAt(0);
