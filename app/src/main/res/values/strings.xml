@@ -7,4 +7,15 @@
     <string name="Button_vvodtxtNumSys">Count</string>
     <string name="popupmenufrstitem">Just conversion</string>
     <string name="popupmenuscnditem">Convension and count</string>
+    <string name="decimal">Decimal</string>
+    <string name="Octal">Octal</string>
+    <string name="Hexadecimal">Hexadecimal</string>
+    <string name="whatnumsysis">Select an introductory number system:</string>
+    <string name="Binary">Binary</string>
+    <string name="Number">number</string>
+    <string name="Equal">equal</string>
+    <string name="in_the_binary_system">in the binary system</string>
+    <string name="in_the_octal_system">in the octal system</string>
+    <string name="in_the_hexadecimal_system">in the hexadecimal system</string>
+    <string name="in_the_decimal_system">in the decimal system</string>
 </resources>

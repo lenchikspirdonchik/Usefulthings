@@ -50,16 +50,51 @@
                 android:textSize="30sp"
                 android:textStyle="normal|bold|italic" />
 
-            <Button
-                android:id="@+id/btn_count"
-                android:layout_width="332dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@color/design_default_color_primary"
-                android:text="@string/Button_vvodtxtNumSys"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/whatnumsysis"
                 android:textColor="@color/colorvvodTextNumSys"
                 android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/rbbinary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Binary" />
+
+                <RadioButton
+                    android:id="@+id/rboctal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Octal" />
+
+                <RadioButton
+                    android:id="@+id/rbdecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/decimal" />
+
+                <RadioButton
+                    android:id="@+id/rbhex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Hexadecimal" />
+            </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
@@ -100,13 +135,13 @@
                 android:textSize="24sp"
                 android:textStyle="normal|italic" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txtdec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24sp"
+                android:textStyle="normal|italic" />
 
         </LinearLayout>
 
