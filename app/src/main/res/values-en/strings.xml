@@ -6,4 +6,6 @@
     <string name="Button_calcFormula">calculation by formulas</string>
     <string name="VvodNextNumSys">Enter the number</string>
     <string name="Button_vvodtxtNumSys">Count</string>
+    <string name="popupmenufrstitem">Just conversion</string>
+    <string name="popupmenuscnditem">Convension and count</string>
 </resources>

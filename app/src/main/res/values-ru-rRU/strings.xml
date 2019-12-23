@@ -6,4 +6,6 @@
     <string name="Button_calcFormula">расчет по формулам</string>
     <string name="VvodNextNumSys">Введите цифру</string>
     <string name="Button_vvodtxtNumSys">Расчёт</string>
+    <string name="popupmenufrstitem">Только перевод</string>
+    <string name="popupmenuscnditem">Перевод и сложение</string>
 </resources>
