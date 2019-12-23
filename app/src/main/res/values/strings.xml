@@ -3,4 +3,6 @@
     <string name="Button_calculator">Calculator</string>
     <string name="buttonHexDec">numeral system</string>
     <string name="Button_calcFormula">calculation by formulas</string>
+    <string name="VvodNextNumSys">Enter the number</string>
+    <string name="Button_vvodtxtNumSys">Count</string>
 </resources>

@@ -7,4 +7,5 @@
     <color name="colorTextCalculator">#FFA201</color>
     <color name="colorTextmain">#3248CE</color>
     <color name="colorTexBackgroundtmain">#FF9800</color>
+    <color name="colorvvodTextNumSys">#FF9800</color>
 </resources>

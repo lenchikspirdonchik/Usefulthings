@@ -22,6 +22,9 @@
         <activity android:name=".MainActivity"
             android:label="@string/Button_calculator">
         </activity>
+        <activity android:name=".NumSysCtivity"
+            android:label="@string/Button_calculator">
+        </activity>
     </application>
 
 </manifest>

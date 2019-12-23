@@ -4,4 +4,6 @@
     <string name="Button_calculator">Калькулятор</string>
     <string name="buttonHexDec">системы счисления</string>
     <string name="Button_calcFormula">расчет по формулам</string>
+    <string name="VvodNextNumSys">Введите цифру</string>
+    <string name="Button_vvodtxtNumSys">Расчёт</string>
 </resources>
