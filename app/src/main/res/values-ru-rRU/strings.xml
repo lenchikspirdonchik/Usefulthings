@@ -8,7 +8,7 @@
     <string name="Button_vvodtxtNumSys">Расчёт</string>
     <string name="popupmenufrstitem">Только перевод</string>
     <string name="popupmenuscnditem">Перевод и сложение</string>
-    <string name="decimal">Двоичная система</string>
+    <string name="decimal">Десячиная система</string>
     <string name="Octal">Восьмиричная система</string>
     <string name="Hexadecimal">Шестнадцатеричная система</string>
     <string name="whatnumsysis">Выберите вводную систему счисления:</string>
@@ -16,7 +16,8 @@
     <string name="Number">число</string>
     <string name="Equal">равно</string>
     <string name="in_the_binary_system">в двоичной системе</string>
-    <string name="in_the_octal_system">в шестнадцатеричной системе</string>
-    <string name="in_the_hexadecimal_system">в двоичной системе</string>
+    <string name="in_the_octal_system">в восьмиричной системе</string>
+    <string name="in_the_hexadecimal_system">в шестнадцатеричной системе</string>
     <string name="in_the_decimal_system">в десятичной системе</string>
+    <string name="Main">Главная</string>
 </resources>

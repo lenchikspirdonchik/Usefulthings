@@ -1,6 +1,7 @@
 package useful.things;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.math.BigInteger;
@@ -49,38 +51,38 @@ public class NumSysCtivity extends AppCompatActivity {
                     switch (checkedId) {
                         case R.id.rbbinary:
                              dec =new BigInteger(new BigInteger(String.valueOf(Integer.parseInt(vvodtxt.getText().toString()))).toString(10),2);
-                            txtotvet.setText(getResources().getString(R.string.Binary)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString()+" "+getResources().getString(R.string.Equal) +":");
-                            txtbin.setText(vvodtxt.getText().toString() + " "+getResources().getString(R.string.in_the_binary_system));
+                            txtbin.setText("");
+                            txtotvet.setText(getResources().getString(R.string.in_the_binary_system)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString()+" "+getResources().getString(R.string.Equal) +":");
                             txtoct.setText(Integer.toOctalString(Integer.parseInt(dec.toString()))+ " "+getResources().getString(R.string.in_the_octal_system));
                             txthex.setText(Integer.toHexString(Integer.parseInt(dec.toString())).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
                             txtdec.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));
 
                             break;
                         case R.id.rbdecimal:
-                            txtotvet.setText(getResources().getString(R.string.decimal)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString()+" "+getResources().getString(R.string.Equal) +":");
+                            txtdec.setText("");
+                            txtotvet.setText(getResources().getString(R.string.in_the_decimal_system)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString()+" "+getResources().getString(R.string.Equal) +":");
                             txtbin.setText(Integer.toBinaryString(Integer.parseInt(vvodtxt.getText().toString())) + " "+getResources().getString(R.string.in_the_binary_system));
                             txtoct.setText(Integer.toOctalString(Integer.parseInt(vvodtxt.getText().toString()))+ " "+getResources().getString(R.string.in_the_octal_system));
                             txthex.setText(Integer.toHexString(Integer.parseInt(vvodtxt.getText().toString())).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
-                            txtdec.setText(vvodtxt.getText().toString()+ " "+getResources().getString(R.string.in_the_decimal_system));
 
 
                             break;
                         case R.id.rbhex:
-                           /* dec =new BigInteger(new BigInteger(String.valueOf(Integer.parseInt(vvodtxt.getText().toString().toUpperCase()))).toString(10),16);
+                            dec = BigInteger.valueOf(hextodec(vvodtxt.getText().toString().toUpperCase()));
+                            txthex.setText("");
                             txtotvet.setText(getResources().getString(R.string.Hexadecimal)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString().toUpperCase()+" "+getResources().getString(R.string.Equal) +":");
                             txtbin.setText(Integer.toBinaryString(Integer.parseInt(dec.toString()))+ " "+getResources().getString(R.string.in_the_binary_system));
                             txtoct.setText(Integer.toOctalString(Integer.parseInt(dec.toString()))+ " "+getResources().getString(R.string.in_the_octal_system));
-                            txthex.setText(vvodtxt.getText().toString().toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
-                            txtdec.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));*/
+                            txtdec.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));
 
                             break;
                         case R.id.rboctal:
-                           /* dec =new BigInteger(new BigInteger(String.valueOf(Integer.parseInt(vvodtxt.getText().toString().toUpperCase()))).toString(10),16);
-                            txtotvet.setText(getResources().getString(R.string.Hexadecimal)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString().toUpperCase()+" "+getResources().getString(R.string.Equal) +":");
+                            txtoct.setText("");
+                            dec =new BigInteger(new BigInteger(String.valueOf(Integer.parseInt(vvodtxt.getText().toString()))).toString(10),8);
+                            txtotvet.setText(getResources().getString(R.string.in_the_octal_system)+" "+getResources().getString(R.string.Number)+" " + vvodtxt.getText().toString()+" "+getResources().getString(R.string.Equal) +":");
                             txtbin.setText(Integer.toBinaryString(Integer.parseInt(dec.toString()))+ " "+getResources().getString(R.string.in_the_binary_system));
-                            txtoct.setText(Integer.toOctalString(Integer.parseInt(dec.toString()))+ " "+getResources().getString(R.string.in_the_octal_system));
-                            txthex.setText(vvodtxt.getText().toString().toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
-                            txtdec.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));*/
+                            txthex.setText(Integer.toHexString(Integer.parseInt(vvodtxt.getText().toString())).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
+                            txtdec.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));
 
 
                             break;
@@ -90,5 +92,35 @@ public class NumSysCtivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    public static int hextodec(String hex) {
+        String digits = "0123456789ABCDEF";
+        int val = 0;
+        for (int i = 0; i < hex.length(); i++) {
+            char j = hex.charAt(i);
+            int k = digits.indexOf(j);
+            val = 16*val + k;
+        }
+        return val;
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("txtotvet", txtotvet.getText().toString());
+        outState.putString("txtbin", txtbin.getText().toString());
+        outState.putString("txthex", txthex.getText().toString());
+        outState.putString("txtdec", txtdec.getText().toString());
+        outState.putString("txtoct", txtoct.getText().toString());
+    }
+
+    @Override
+    public void onRestoreInstanceState(@Nullable Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        txtotvet.setText(savedInstanceState.getString("txtotvet"));
+        txtbin.setText(savedInstanceState.getString("txtbin"));
+        txthex.setText(savedInstanceState.getString("txthex"));
+        txtdec.setText(savedInstanceState.getString("txtdec"));
+        txtoct.setText(savedInstanceState.getString("txtoct"));
     }
 }

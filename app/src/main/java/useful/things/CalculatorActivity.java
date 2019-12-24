@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 public class CalculatorActivity extends AppCompatActivity {
 
@@ -85,5 +86,18 @@ public class CalculatorActivity extends AppCompatActivity {
             bmulti.setEnabled(false);
             bdiv.setEnabled(false);
         }
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("txtotvet", txt.getText().toString());
+
+    }
+
+    @Override
+    public void onRestoreInstanceState(@Nullable Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        txt.setText(savedInstanceState.getString("txtotvet"));
+
     }
 }
