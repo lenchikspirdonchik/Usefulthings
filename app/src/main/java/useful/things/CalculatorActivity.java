@@ -5,17 +5,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.regex.Pattern;
 
 public class CalculatorActivity extends AppCompatActivity {
 
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar;
-     char opt = ' ';
-     boolean go = true, addWrite = true;
-     double val = 0;
-     String buffertxt = "";
+    char opt = ' ';
+    boolean go = true, addWrite = true;
+    double val = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,27 +43,21 @@ public class CalculatorActivity extends AppCompatActivity {
         bdelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              txt.setText("");
+                txt.setText("");
                 opt = ' ';
                 val = 0;
-                buffertxt="";
             }
         });
         bdelonechar.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        String str = txt.getText().toString();
-        StringBuilder str2 = new StringBuilder();
-        for (int i = 0; i < (str.length() - 1); i++) {
-            str2.append(str.charAt(i));
-        }
-        if (str2.toString().equals("")) {
-            txt.setText("0");
-        } else {
-            txt.setText(str2.toString());
-        }
-    }
-});
+            @Override
+            public void onClick(View v) {
+                String str = txt.getText().toString();
+                StringBuilder str2 = new StringBuilder();
+                for (int i = 0; i < (str.length() - 1); i++) str2.append(str.charAt(i));
+                if (str2.toString().equals("")) txt.setText("0");
+                else txt.setText(str2.toString());
+            }
+        });
 
         View.OnClickListener btnnum = new View.OnClickListener() {
             @Override
@@ -74,9 +66,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 if (addWrite) {
                     if (Pattern.matches("[0]*", txt.getText().toString())) {
                         txt.setText(numbtn.getText().toString());
-                    } else {
-                        txt.setText(txt.getText().toString()+numbtn.getText().toString());
-                    }
+                    } else txt.setText(txt.getText().toString() + numbtn.getText().toString());
                 } else {
                     txt.setText(numbtn.getText().toString());
                     addWrite = true;
@@ -93,52 +83,42 @@ public class CalculatorActivity extends AppCompatActivity {
                 if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
                     if (go) {
                         val = calc(val, txt.getText().toString(), opt);
-                        if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) {
-                            txt.setText(String.valueOf((int) val));
-
-                        } else {
-                            txt.setText(String.valueOf(val));
-                        }
-                        opt=calculatbtn.getText().toString().charAt(0);
+                        if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) txt.setText(String.valueOf((int) val));
+                        else txt.setText(String.valueOf(val));
+                        opt = calculatbtn.getText().toString().charAt(0);
                         go = false;
                         addWrite = false;
                     } else {
-                        opt=calculatbtn.getText().toString().charAt(0);
+                        opt = calculatbtn.getText().toString().charAt(0);
                         txt.setText(String.valueOf((int) val));
                     }
             }
         };
 
-
-
-bpoint.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        if (addWrite) {
-            txt.setText(txt.getText().toString() + ".");
-        } else {
-            txt.setText("0.");
-            addWrite = true;
-        }
-        go = true;
-    }
-});
-bequel.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
-            if (go) {
-                val = calc(val, txt.getText().toString(), opt);
-                if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) {
-                    txt.setText(String.valueOf((int) val));
-                } else {
-                    txt.setText(String.valueOf(val));
+        bpoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (addWrite) txt.setText(txt.getText().toString() + ".");
+                    else {
+                    txt.setText("0.");
+                    addWrite = true;
                 }
-                opt = '=';
-                addWrite = false;
+                go = true;
             }
-    }
-});
+        });
+        bequel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
+                    if (go) {
+                        val = calc(val, txt.getText().toString(), opt);
+                        if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) txt.setText(String.valueOf((int) val));
+                        else txt.setText(String.valueOf(val));
+                        opt = '=';
+                        addWrite = false;
+                    }
+            }
+        });
         b1.setOnClickListener(btnnum);
         b2.setOnClickListener(btnnum);
         b3.setOnClickListener(btnnum);
@@ -155,21 +135,17 @@ bequel.setOnClickListener(new View.OnClickListener() {
         bdiv.setOnClickListener(btncalculat);
         bmulti.setOnClickListener(btncalculat);
     }
-// val = calc(val, txt.getText().toString(), opt);
-     public double calc(double x, String input, char opt) {
+
+    public double calc(double x, String input, char opt) {
         double y = Double.parseDouble(input);
-        if (opt == '+') {
-            return x + y;
-        } else if (opt == '-') {
-            return x - y;
-        } else if (opt == '*') {
-            return x * y;
-        } else if (opt == '/') {
-            return x / y;
-        } else if (opt == '%') {
-            return x % y;
-        } else {
-            return y;
-        }
+       switch (opt){
+            case '+':return x + y;
+            case '-':return x - y;
+            case '*':return x * y;
+            case '/':return x / y;
+            case '%':return x % y;
+            default:return y;
+
+       }
     }
 }
