@@ -5,6 +5,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.regex.Pattern;
 
 public class CalculatorActivity extends AppCompatActivity {
@@ -14,6 +19,7 @@ public class CalculatorActivity extends AppCompatActivity {
     char opt = ' ';
     boolean go = true, addWrite = true;
     double val = 0;
+    String buffer="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 txt.setText("");
                 opt = ' ';
                 val = 0;
+                buffer="";
             }
         });
         bdelonechar.setOnClickListener(new View.OnClickListener() {
@@ -54,8 +61,14 @@ public class CalculatorActivity extends AppCompatActivity {
                 String str = txt.getText().toString();
                 StringBuilder str2 = new StringBuilder();
                 for (int i = 0; i < (str.length() - 1); i++) str2.append(str.charAt(i));
-                if (str2.toString().equals("")) txt.setText("0");
-                else txt.setText(str2.toString());
+                if (str2.toString().equals("")) {
+                    txt.setText("0");
+                    buffer="0";
+                }
+                else {
+                    txt.setText(str2.toString());
+                    buffer=(str2.toString());
+                }
             }
         });
 
@@ -66,7 +79,11 @@ public class CalculatorActivity extends AppCompatActivity {
                 if (addWrite) {
                     if (Pattern.matches("[0]*", txt.getText().toString())) {
                         txt.setText(numbtn.getText().toString());
-                    } else txt.setText(txt.getText().toString() + numbtn.getText().toString());
+                        buffer=(numbtn.getText().toString());
+                    } else {
+                        txt.setText(txt.getText().toString() + numbtn.getText().toString());
+                        buffer=(txt.getText().toString() + numbtn.getText().toString());
+                    }
                 } else {
                     txt.setText(numbtn.getText().toString());
                     addWrite = true;
@@ -148,4 +165,5 @@ public class CalculatorActivity extends AppCompatActivity {
 
        }
     }
+
 }

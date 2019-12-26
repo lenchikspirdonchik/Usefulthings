@@ -22,4 +22,5 @@
     <string name="Main">Главная</string>
     <string name="delonechar">стереть</string>
     <string name="del">удалить</string>
+    <string name="errnumsys">невозможно перевестив данную систему счисления</string>
 </resources>

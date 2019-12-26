@@ -22,4 +22,5 @@
     <string name="Main">Main</string>
     <string name="delonechar">backspace</string>
     <string name="del">Del</string>
+    <string name="errnumsys">it is not possible to translate this number system</string>
 </resources>
