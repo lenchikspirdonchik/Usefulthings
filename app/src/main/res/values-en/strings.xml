@@ -20,4 +20,5 @@
     <string name="in_the_hexadecimal_system">in the hexadecimal system</string>
     <string name="in_the_decimal_system">in the decimal system</string>
     <string name="Main">Main</string>
+    <string name="delonechar">del</string>
 </resources>

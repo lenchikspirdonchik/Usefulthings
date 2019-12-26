@@ -20,4 +20,5 @@
     <string name="in_the_hexadecimal_system">в шестнадцатеричной системе</string>
     <string name="in_the_decimal_system">в десятичной системе</string>
     <string name="Main">Главная</string>
+    <string name="delonechar">стереть</string>
 </resources>

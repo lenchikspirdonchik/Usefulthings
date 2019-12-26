@@ -51,213 +51,110 @@
                 android:textSize="40sp" />
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="4">
 
             <Button
-                android:id="@+id/b1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:text="1"
-                android:textSize="40sp" />
+                android:id="@+id/delete"
+                android:layout_width="100dp"
+                android:text="C" />
+            <Button
+                android:id="@+id/delonechar"
+                android:layout_width="100dp"
+                android:text="@string/delonechar" />
+            <Button
+                android:id="@+id/division"
+                android:layout_width="100dp"
+                android:layout_column="3"
+                android:text="/" />
 
             <Button
-                android:id="@+id/b2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="2"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
+                android:id="@+id/btn_1"
+                android:layout_width="100dp"
+                android:text="1" />
 
             <Button
-                android:id="@+id/b3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="3"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
+                android:id="@+id/btn_2"
+                android:layout_width="100dp"
+                android:text="2" />
 
             <Button
-                android:id="@+id/plus"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:onClick="sign"
-                android:text="+"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/b4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="4"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/b5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="5"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/b6"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="6"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/minus"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:onClick="sign"
-                android:text="-"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/b7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="7"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/b8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="8"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-
-            <Button
-                android:id="@+id/b9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="9"
-                android:background="@drawable/oval_button"
-                android:onClick="setNumb"
-                android:textSize="40sp" />
+                android:id="@+id/btn_3"
+                android:layout_width="100dp"
+                android:text="3" />
 
             <Button
                 android:id="@+id/multyply"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:onClick="sign"
-                android:text="*"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
+                android:layout_width="100dp"
+                android:text="*" />
 
             <Button
-                android:id="@+id/dot"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="."
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
+                android:id="@+id/btn_4"
+                android:layout_width="100dp"
+                android:text="4" />
 
             <Button
-                android:id="@+id/b0"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="0"
-                android:onClick="setNumb"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
+                android:id="@+id/btn_5"
+                android:layout_width="100dp"
+                android:text="5" />
 
+            <Button
+                android:id="@+id/btn_6"
+                android:layout_width="100dp"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="100dp"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/btn_7"
+                android:layout_width="100dp"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/btn_8"
+                android:layout_width="100dp"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/btn_9"
+                android:layout_width="100dp"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="100dp"
+                android:layout_rowSpan="3"
+                android:layout_gravity="fill"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/btn_0"
+                android:layout_width="100dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btn_00"
+                android:layout_width="100dp"
+                android:text="00" />
+            <Button
+                android:id="@+id/btn_point"
+                android:layout_width="100dp"
+                android:text="." />
             <Button
                 android:id="@+id/equal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="="
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
+                android:layout_width="100dp"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="=" />
 
-            <Button
-                android:id="@+id/division"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:onClick="sign"
-                android:text="/"
-                android:background="@drawable/oval_button"
-                android:textSize="40sp" />
-        </LinearLayout>
+        </GridLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
