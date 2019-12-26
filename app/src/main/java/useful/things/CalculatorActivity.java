@@ -13,8 +13,8 @@ public class CalculatorActivity extends AppCompatActivity {
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar;
      char opt = ' ';
-     boolean go = true, addWrite = true, bool = false;
-     double val = 1;
+     boolean go = true, addWrite = true;
+     double val = 0;
      String buffertxt = "";
 
     @Override
@@ -78,7 +78,7 @@ public class CalculatorActivity extends AppCompatActivity {
                         txt.setText(txt.getText().toString()+numbtn.getText().toString());
                     }
                 } else {
-                    txt.setText(txt.getText().toString());
+                    txt.setText(numbtn.getText().toString());
                     addWrite = true;
                 }
                 go = true;
@@ -89,12 +89,13 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
-                opt=calculatbtn.getText().toString().charAt(0);
+                //opt=calculatbtn.getText().toString().charAt(0);
                 if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
                     if (go) {
                         val = calc(val, txt.getText().toString(), opt);
                         if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) {
                             txt.setText(String.valueOf((int) val));
+
                         } else {
                             txt.setText(String.valueOf(val));
                         }
@@ -103,6 +104,7 @@ public class CalculatorActivity extends AppCompatActivity {
                         addWrite = false;
                     } else {
                         opt=calculatbtn.getText().toString().charAt(0);
+                        txt.setText(String.valueOf((int) val));
                     }
             }
         };
