@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".StartActivity">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -20,6 +21,11 @@
         </activity>
         <activity android:name=".MainActivity"
             android:label="@string/Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+            </intent-filter>
         </activity>
         <activity android:name=".NumSysCtivity"
             android:label="@string/buttonHexDec">

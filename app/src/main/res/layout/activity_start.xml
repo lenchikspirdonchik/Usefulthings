@@ -13,5 +13,5 @@
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/startscreen" />
+        android:src="@drawable/startscreen" />
 </androidx.constraintlayout.widget.ConstraintLayout>

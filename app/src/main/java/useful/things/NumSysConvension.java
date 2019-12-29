@@ -1,4 +1,4 @@
-package useful.things;
+/*package useful.things;
 
 import android.widget.Switch;
 import android.widget.Toast;
@@ -67,4 +67,4 @@ public class NumSysConvension {
 
 // end
 
-        }
+        }*/
