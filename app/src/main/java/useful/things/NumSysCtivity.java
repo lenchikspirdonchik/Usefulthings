@@ -37,7 +37,6 @@ public class NumSysCtivity extends AppCompatActivity {
                 vvodtxt.setText("");
             }
         });
-
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

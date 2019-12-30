@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.math.BigInteger;
 
 // binary  decimal   hexadecimal  octal
-public class NumSysConvension extends AppCompatActivity {
-    public String NumSysConvension (String number,String in, String out){
+public  class NumSysConvension extends AppCompatActivity {
+    public static String NumSysConvension (String number,String in, String out){
         BigInteger dec;
 
         switch(in) {
@@ -19,7 +19,7 @@ public class NumSysConvension extends AppCompatActivity {
                     }
                 }
                 catch (Exception e) {
-                    return (String) getResources().getText(R.string.errnumsys);
+                    return "error";
                 }
                 break;
 
@@ -33,7 +33,7 @@ public class NumSysConvension extends AppCompatActivity {
                     }
                 }
                 catch (Exception e) {
-                    return (String) getResources().getText(R.string.errnumsys);
+                    return "error";
                 }
                 break;
 
@@ -47,7 +47,7 @@ public class NumSysConvension extends AppCompatActivity {
                     }
                 }
                 catch (Exception e) {
-                    return (String) getResources().getText(R.string.errnumsys);
+                    return "error";
                 }
                 break;
 
@@ -61,11 +61,11 @@ public class NumSysConvension extends AppCompatActivity {
                     }
                 }
                 catch (Exception e) {
-                    return (String) getResources().getText(R.string.errnumsys);
+                    return "error";
                 }
                 break;
         }
-        return (String) getResources().getText(R.string.errnumsys);
+        return "error";
     }
 
     public static int hextodec(String hex) {
