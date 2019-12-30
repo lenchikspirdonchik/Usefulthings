@@ -44,7 +44,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:paddingTop="10dp"
-                android:text="@string/VvodNextNumSys"
+                android:hint="@string/VvodNextNumSys"
                 android:textAllCaps="true"
                 android:textColor="@color/colorvvodTextNumSys"
                 android:textSize="30sp"

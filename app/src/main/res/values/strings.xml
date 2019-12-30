@@ -23,4 +23,6 @@
     <string name="del">Delete</string>
     <string name="errnumsys">it is not possible to translate this number system</string>
     <string name="CalcNumSys">calculation of number systems</string>
+    <string name="VvodCalcNumSys1">Enter the first number</string>
+    <string name="VvodCalcNumSys2">Enter the second number</string>
 </resources>

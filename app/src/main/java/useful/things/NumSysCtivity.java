@@ -31,12 +31,6 @@ public class NumSysCtivity extends AppCompatActivity {
         txt2=(TextView)findViewById(R.id.txt2);
         txtotvet=(TextView)findViewById(R.id.txtotvet);
         radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
-        vvodtxt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vvodtxt.setText("");
-            }
-        });
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
