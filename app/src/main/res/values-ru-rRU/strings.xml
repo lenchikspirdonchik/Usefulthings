@@ -23,4 +23,5 @@
     <string name="delonechar">стереть</string>
     <string name="del">удалить</string>
     <string name="errnumsys">невозможно перевестив данную систему счисления</string>
+    <string name="CalcNumSys">расчет систем счисления</string>
 </resources>

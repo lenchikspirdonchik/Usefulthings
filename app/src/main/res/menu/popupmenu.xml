@@ -7,6 +7,7 @@
             android:title="@string/popupmenufrstitem"/>
         <item
             android:id="@+id/menu2"
+            android:icon="@mipmap/ic_launcher"
             android:title="@string/popupmenuscnditem"/>
 
     </group>

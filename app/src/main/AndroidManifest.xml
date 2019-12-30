@@ -18,17 +18,31 @@
         </activity>
         <activity android:name=".CalculatorActivity"
             android:label="@string/Button_calculator">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.APP_CALCULATOR"></category>
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity"
             android:label="@string/Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"></action>
-
                 <category android:name="android.intent.category.DEFAULT"></category>
             </intent-filter>
         </activity>
         <activity android:name=".NumSysCtivity"
             android:label="@string/buttonHexDec">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.APP_CALCULATOR"></category>
+            </intent-filter>
+        </activity>
+        <activity android:name=".CalcNumSysCActivity"
+            android:label="@string/CalcNumSys">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.APP_CALCULATOR"></category>
+            </intent-filter>
         </activity>
     </application>
 

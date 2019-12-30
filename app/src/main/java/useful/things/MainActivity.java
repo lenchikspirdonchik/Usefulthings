@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         numeralsystems.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 showPopupMenu(v);
             }
         });
@@ -53,8 +52,9 @@ public class MainActivity extends AppCompatActivity {
                                 startActivity(intent);
                                 return true;
                             case R.id.menu2:
+                                Intent intent2 = new Intent(MainActivity.this, CalcNumSysCActivity.class);
+                                startActivity(intent2);
                                 return true;
-
                             default:
                                 return false;
                         }
