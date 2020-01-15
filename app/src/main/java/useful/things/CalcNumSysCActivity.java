@@ -98,7 +98,10 @@ public class CalcNumSysCActivity extends AppCompatActivity {
                             break;
                         case R.id.btnminus:
                             try {
-                                //int a= NumSysConvension(vvodtxt1.getText().toString(), );
+                                a-=Integer.parseInt(numb2);
+                                txt0.setText(Integer.toOctalString(a)+ " "+getResources().getString(R.string.in_the_octal_system));
+                                txt1.setText(Integer.toHexString(a).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
+                                txt2.setText(String.valueOf(a)+ " "+getResources().getString(R.string.in_the_decimal_system));
 
                             }
                             catch (Exception e) {
@@ -109,7 +112,10 @@ public class CalcNumSysCActivity extends AppCompatActivity {
 
                         case R.id.btnmulti:
                             try {
-                                //int a= NumSysConvension(vvodtxt1.getText().toString(), );
+                                a*=Integer.parseInt(numb2);
+                                txt0.setText(Integer.toOctalString(a)+ " "+getResources().getString(R.string.in_the_octal_system));
+                                txt1.setText(Integer.toHexString(a).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
+                                txt2.setText(String.valueOf(a)+ " "+getResources().getString(R.string.in_the_decimal_system));
 
                             }
                             catch (Exception e) {
@@ -120,7 +126,10 @@ public class CalcNumSysCActivity extends AppCompatActivity {
 
                         case R.id.btndiv:
                             try {
-                                //int a= NumSysConvension(vvodtxt1.getText().toString(), );
+                                a/=Integer.parseInt(numb2);
+                                txt0.setText(Integer.toOctalString(a)+ " "+getResources().getString(R.string.in_the_octal_system));
+                                txt1.setText(Integer.toHexString(a).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
+                                txt2.setText(String.valueOf(a)+ " "+getResources().getString(R.string.in_the_decimal_system));
 
                             }
                             catch (Exception e) {
