@@ -26,4 +26,6 @@
     <string name="CalcNumSys">calculation of number systems</string>
     <string name="VvodCalcNumSys1">Enter the first number</string>
     <string name="VvodCalcNumSys2">Enter the second number</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_gallery">Gallery</string>
 </resources>

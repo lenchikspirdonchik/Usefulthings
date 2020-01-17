@@ -9,39 +9,53 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity"
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".StartActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalculatorActivity"
+        <activity
+            android:name=".CalculatorActivity"
             android:label="@string/Button_calculator">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.APP_CALCULATOR"></category>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.APP_CALCULATOR" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="@string/Main">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".NumSysCtivity"
+        <activity
+            android:name=".NumSysCtivity"
             android:label="@string/buttonHexDec">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.APP_CALCULATOR"></category>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.APP_CALCULATOR" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalcNumSysCActivity"
+        <activity
+            android:name=".CalcNumSysCActivity"
             android:label="@string/CalcNumSys">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"></action>
-                <category android:name="android.intent.category.APP_CALCULATOR"></category>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.APP_CALCULATOR" />
             </intent-filter>
         </activity>
     </application>

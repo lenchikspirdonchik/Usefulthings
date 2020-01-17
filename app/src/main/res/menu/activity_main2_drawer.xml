@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calc"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/Button_calculator" />
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:title="@string/buttonHexDec" >
+        <menu>
+            <item
+                android:id="@+id/NumSysConv"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/popupmenufrstitem" />
+            <item
+                android:id="@+id/NumSysCalc"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/popupmenuscnditem" />
+        </menu>
+    </item>
+</group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calcFormula"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/Button_calcFormula" />
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/Button_calcFormula" >
+            <menu>
+                <item
+                    android:id="@+id/Mathformula"
+                    android:icon="@drawable/ic_menu_share"
+                    android:title="math formula" />
+                <item
+                    android:id="@+id/PhFormula"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="physics formula" />
+            </menu>
+        </item>
+    </group>
+
+
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>

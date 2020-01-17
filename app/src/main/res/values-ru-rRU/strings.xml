@@ -26,4 +26,5 @@
     <string name="CalcNumSys">расчет систем счисления</string>
     <string name="VvodCalcNumSys1">Введите первую цифру</string>
     <string name="VvodCalcNumSys2">Введите вторую цифру</string>
+    <string name="action_settings">Настройки</string>
 </resources>
