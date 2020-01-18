@@ -1,4 +1,4 @@
-package useful.things.ui.send;
+package useful.things.ui.numsyscalc;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import useful.things.R;
 
-public class SendFragment extends Fragment {
+public class NumSysCalcFragment extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private NumSysCalcViewModel navNumSysCalcViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        navNumSysCalcViewModel =
+                ViewModelProviders.of(this).get(NumSysCalcViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_numsyscalc, container, false);
         final TextView textView = root.findViewById(R.id.text_send);
-        sendViewModel.getText().observe(this, new Observer<String>() {
+        navNumSysCalcViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

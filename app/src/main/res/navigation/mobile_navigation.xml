@@ -12,16 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="useful.things.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_calc"
+        android:name="useful.things.ui.calculator.CalcFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_calc" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="useful.things.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_NumSysConv"
+        android:name="useful.things.ui.numsysconv.NumSysConvFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_numsysconv" />
 
     <fragment
         android:id="@+id/nav_tools"
@@ -36,8 +36,8 @@
         tools:layout="@layout/fragment_share" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="useful.things.ui.send.SendFragment"
+        android:id="@+id/nav_NumSysCalc"
+        android:name="useful.things.ui.numsyscalc.NumSysCalcFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_numsyscalc" />
 </navigation>

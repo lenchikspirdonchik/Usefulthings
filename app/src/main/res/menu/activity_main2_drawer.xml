@@ -20,11 +20,11 @@
     <item android:title="@string/buttonHexDec" >
         <menu>
             <item
-                android:id="@+id/NumSysConv"
+                android:id="@+id/nav_NumSysConv"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/popupmenufrstitem" />
             <item
-                android:id="@+id/NumSysCalc"
+                android:id="@+id/nav_NumSysCalc"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/popupmenuscnditem" />
         </menu>
@@ -43,11 +43,11 @@
         <item android:title="@string/Button_calcFormula" >
             <menu>
                 <item
-                    android:id="@+id/Mathformula"
+                    android:id="@+id/nav_Mathformula"
                     android:icon="@drawable/ic_menu_share"
                     android:title="math formula" />
                 <item
-                    android:id="@+id/PhFormula"
+                    android:id="@+id/nav_PhFormula"
                     android:icon="@drawable/ic_menu_send"
                     android:title="physics formula" />
             </menu>

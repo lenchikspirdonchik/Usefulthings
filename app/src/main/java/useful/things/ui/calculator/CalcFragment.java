@@ -1,4 +1,4 @@
-package useful.things.ui.gallery;
+package useful.things.ui.calculator;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,30 +7,28 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import java.util.regex.Pattern;
 
 import useful.things.R;
 
-public class GalleryFragment extends Fragment {
+public class CalcFragment extends Fragment {
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar;
     char opt = ' ';
     boolean go = true, addWrite = true;
     double val = 0;
     String buffer="";
-    private GalleryViewModel galleryViewModel;
+    private CalcViewModel calcViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+        calcViewModel =
+                ViewModelProviders.of(this).get(CalcViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_calc, container, false);
        /* final TextView textView = root.findViewById(R.id.text_gallery);
         galleryViewModel.getText().observe(this, new Observer<String>() {
             @Override
