@@ -52,7 +52,6 @@ public class SlideshowFragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (vvodtxt.getText().toString().equals("") || vvodtxt.getText().toString().equals(getResources().getString(R.string.VvodNextNumSys))){
                     //Toast.makeText(SlideshowFragment.this, "Вы ничего не ввели", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(this, "Вы ничего не ввели", Toast.LENGTH_SHORT).show();
 
                 }else {
                     BigInteger dec;
@@ -66,7 +65,7 @@ public class SlideshowFragment extends Fragment {
                                 txt2.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));
                             }
                             catch (Exception e) {
-                                Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
                             }
 
                             break;
@@ -78,7 +77,7 @@ public class SlideshowFragment extends Fragment {
                                 txt2.setText(Integer.toHexString(Integer.parseInt(vvodtxt.getText().toString())).toUpperCase()+ " "+getResources().getString(R.string.in_the_hexadecimal_system));
                             }
                             catch (Exception e) {
-                                Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
                             }
 
                             break;
@@ -91,7 +90,7 @@ public class SlideshowFragment extends Fragment {
                                 txt2.setText(String.valueOf(dec)+ " "+getResources().getString(R.string.in_the_decimal_system));
                             }
                             catch (Exception e) {
-                                Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
                             }
                             break;
                         case R.id.rboctal:
@@ -104,7 +103,7 @@ public class SlideshowFragment extends Fragment {
                                 break;
                             }
                             catch (Exception e) {
-                                Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(NumSysCtivity.this, getResources().getText(R.string.errnumsys), Toast.LENGTH_SHORT).show();
                             }
                         default:
                             break;
@@ -125,7 +124,7 @@ public class SlideshowFragment extends Fragment {
         return val;
     }
 
-    @Override
+  /*  @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putString("txtotvet", txtotvet.getText().toString());
@@ -141,5 +140,5 @@ public class SlideshowFragment extends Fragment {
         txt0.setText(savedInstanceState.getString("txt0"));
         txt1.setText(savedInstanceState.getString("txt1"));
         txt2.setText(savedInstanceState.getString("txt2"));
-    }
+    }*/
 }
