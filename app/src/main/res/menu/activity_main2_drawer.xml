@@ -9,6 +9,8 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
     </group>
+
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_calc"
@@ -16,8 +18,9 @@
             android:title="@string/Button_calculator" />
     </group>
 
+
     <group android:checkableBehavior="single">
-    <item android:title="@string/buttonHexDec" >
+        <item android:title="@string/menu_numsyscalc">
         <menu>
             <item
                 android:id="@+id/nav_NumSysConv"
@@ -30,13 +33,6 @@
         </menu>
     </item>
 </group>
-
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_calcFormula"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/Button_calcFormula" />
-    </group>
 
 
     <group android:checkableBehavior="single">
@@ -66,7 +62,7 @@
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
+                android:title="@string/menu_numsyscalc" />
         </menu>
     </item>
 

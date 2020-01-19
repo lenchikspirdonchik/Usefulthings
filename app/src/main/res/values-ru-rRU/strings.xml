@@ -19,7 +19,6 @@
     <string name="in_the_octal_system">в восьмиричной системе</string>
     <string name="in_the_hexadecimal_system">в шестнадцатеричной системе</string>
     <string name="in_the_decimal_system">в десятичной системе</string>
-    <string name="Main">Главная</string>
     <string name="delonechar">стереть</string>
     <string name="del">удалить</string>
     <string name="errnumsys">невозможно перевестив данную систему счисления</string>
@@ -27,4 +26,8 @@
     <string name="VvodCalcNumSys1">Введите первую цифру</string>
     <string name="VvodCalcNumSys2">Введите вторую цифру</string>
     <string name="action_settings">Настройки</string>
+    <string name="menu_calc">Калькулятор</string>
+    <string name="menu_home">Главная</string>
+    <string name="menu_numsyscalc">расчет систем счисления</string>
+    <string name="menu_numsysconv">Перевод</string>
 </resources>

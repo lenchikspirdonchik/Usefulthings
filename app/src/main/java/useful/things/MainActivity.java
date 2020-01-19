@@ -1,73 +1,64 @@
 package useful.things;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
+import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
-import android.widget.PopupMenu;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
-    Button calculator;
-    Button numeralsystems;
-    Button calcform;
-    PopupMenu popupMenu;
+
+    private AppBarConfiguration mAppBarConfiguration;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         calculator = (Button) findViewById(R.id.btn_calc);
-         numeralsystems = (Button) findViewById(R.id.btn_numsys);
-         calcform = (Button) findViewById(R.id.btn_calcform);
-         popupMenu = new PopupMenu(this, numeralsystems);
-
-
-        calculator.setOnClickListener(new View.OnClickListener() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
-        numeralsystems.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showPopupMenu(v);
-            }
-        });
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_calc, R.id.nav_NumSysConv,
+                R.id.nav_NumSysCalc, R.id.nav_share, R.id.nav_tools)
+                .setDrawerLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-    private void showPopupMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(this, v);
-        popupMenu.inflate(R.menu.popupmenu);
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.menu1:
-                                Intent intent = new Intent(MainActivity.this, NumSysCtivity.class);
-                                startActivity(intent);
-                                return true;
-                            case R.id.menu2:
-                                Intent intent2 = new Intent(MainActivity.this, CalcNumSysCActivity.class);
-                                startActivity(intent2);
-                                return true;
-                            default:
-                                return false;
-                        }
-                    }
-                });
-
-        popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {
-            @Override
-            public void onDismiss(PopupMenu menu) {
-            }
-        });
-        popupMenu.show();
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main2, menu);
+        return true;
     }
 
-
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                || super.onSupportNavigateUp();
+    }
 }
