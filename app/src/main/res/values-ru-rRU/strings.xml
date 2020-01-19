@@ -30,4 +30,9 @@
     <string name="menu_home">Главная</string>
     <string name="menu_numsyscalc">расчет систем счисления</string>
     <string name="menu_numsysconv">Перевод</string>
+    <string name="navigation_drawer_close">Закрыть панель навигации</string>
+    <string name="navigation_drawer_open">Открыть панель навигации</string>
+    <string name="nav_header_desc" translatable="false">Навигационный заголовок</string>
+    <string name="nav_header_title">Полезные вещи</string>
+    <string name="nav_header_subtitle">by Spiridonov prod.</string>
 </resources>
