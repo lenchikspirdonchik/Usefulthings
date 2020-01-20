@@ -38,4 +38,5 @@
     <string name="menu_numsyscalc">Calculation of number systems</string>
     <string name="menu_numsysconv">Just conversion</string>
     <string name="nav_header_title">Useful things</string>
+    <string name="divonzero">You can\'t div on zero</string>
 </resources>

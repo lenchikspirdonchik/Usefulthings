@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -107,7 +108,6 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
-                //opt=calculatbtn.getText().toString().charAt(0);
                 if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
                     if (go) {
                         val = calc(val, txt.getText().toString(), opt);
@@ -173,7 +173,12 @@ public class CalcFragment extends Fragment {
             case '+':return x + y;
             case '-':return x - y;
             case '*':return x * y;
-            case '/':return x / y;
+            case '/':
+                if (y==0) {
+                    Toast.makeText(getActivity(), getString(R.string.divonzero), Toast.LENGTH_SHORT).show();
+                    return 0;
+                }
+                else return x / y;
             case '%':return x % y;
             default:return y;
 
