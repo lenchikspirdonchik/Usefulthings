@@ -12,10 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import useful.things.R;
-
 public class CalcFragment extends Fragment {
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar;
@@ -25,18 +25,9 @@ public class CalcFragment extends Fragment {
     String buffer="";
     private CalcViewModel calcViewModel;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        calcViewModel =
-                ViewModelProviders.of(this).get(CalcViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        calcViewModel = ViewModelProviders.of(this).get(CalcViewModel.class);
         View root = inflater.inflate(R.layout.fragment_calc, container, false);
-       /* final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
         txt = (TextView) root.findViewById(R.id.txt);
         bplus = (Button)root.findViewById(R.id.plus);
         bminus = (Button) root.findViewById(R.id.minus);
@@ -57,6 +48,24 @@ public class CalcFragment extends Fragment {
         b0 = (Button) root.findViewById(R.id.btn_0);
         b00 = (Button) root.findViewById(R.id.btn_00);
         bpoint = (Button) root.findViewById(R.id.btn_point);
+        ArrayList<Button> buttonArrayList = new ArrayList<>();
+        ArrayList<Button> buttonactionArrayList = new ArrayList<>();
+        buttonactionArrayList.add(bplus);
+        buttonactionArrayList.add(bminus);
+        buttonactionArrayList.add(bmulti);
+        buttonactionArrayList.add(bdiv);
+        buttonArrayList.add(b1);
+        buttonArrayList.add(b2);
+        buttonArrayList.add(b3);
+        buttonArrayList.add(b4);
+        buttonArrayList.add(b5);
+        buttonArrayList.add(b6);
+        buttonArrayList.add(b7);
+        buttonArrayList.add(b8);
+        buttonArrayList.add(b9);
+        buttonArrayList.add(b0);
+        buttonArrayList.add(b00);
+
 
         bdelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,26 +156,18 @@ public class CalcFragment extends Fragment {
                     }
             }
         });
-        b1.setOnClickListener(btnnum);
-        b2.setOnClickListener(btnnum);
-        b3.setOnClickListener(btnnum);
-        b4.setOnClickListener(btnnum);
-        b5.setOnClickListener(btnnum);
-        b6.setOnClickListener(btnnum);
-        b7.setOnClickListener(btnnum);
-        b8.setOnClickListener(btnnum);
-        b9.setOnClickListener(btnnum);
-        b0.setOnClickListener(btnnum);
-        b00.setOnClickListener(btnnum);
-        bplus.setOnClickListener(btncalculat);
-        bminus.setOnClickListener(btncalculat);
-        bdiv.setOnClickListener(btncalculat);
-        bmulti.setOnClickListener(btncalculat);
-
-
+        for (Button haha : buttonArrayList
+        ) {
+            haha.setOnClickListener(btnnum);
+        }
+        for (Button hoho : buttonactionArrayList
+        ) {
+            hoho.setOnClickListener(btncalculat);
+        }
 
         return root;
     }
+
     public double calc(double x, String input, char opt) {
         double y = Double.parseDouble(input);
         switch (opt){
@@ -181,7 +182,6 @@ public class CalcFragment extends Fragment {
                 else return x / y;
             case '%':return x % y;
             default:return y;
-
         }
     }
 }
