@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/home"
             android:title="@string/menu_home" />
     </group>
 
@@ -14,7 +14,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_calc"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/calculator"
             android:title="@string/Button_calculator" />
     </group>
 
@@ -24,11 +24,11 @@
         <menu>
             <item
                 android:id="@+id/nav_NumSysConv"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_action_name"
                 android:title="@string/popupmenufrstitem" />
             <item
                 android:id="@+id/nav_NumSysCalc"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/numsyscalc"
                 android:title="@string/popupmenuscnditem" />
         </menu>
     </item>
@@ -40,12 +40,24 @@
             <menu>
                 <item
                     android:id="@+id/nav_mathformula"
-                    android:icon="@drawable/ic_menu_share"
+                    android:icon="@drawable/formula"
                     android:title="@string/menu_mathformula" />
                 <item
                     android:id="@+id/nav_phformula"
-                    android:icon="@drawable/ic_menu_send"
+                    android:icon="@drawable/formula"
                     android:title="@string/menu_phformula" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/Other">
+            <menu>
+                <item
+                    android:id="@+id/nav_aboutApp"
+                    android:icon="@drawable/aboutapp"
+                    android:title="@string/AboutApp" />
+
             </menu>
         </item>
     </group>

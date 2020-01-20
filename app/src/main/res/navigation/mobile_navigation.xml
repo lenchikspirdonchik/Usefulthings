@@ -40,4 +40,9 @@
         android:name="useful.things.ui.numsyscalc.NumSysCalcFragment"
         android:label="@string/menu_numsyscalc"
         tools:layout="@layout/fragment_numsyscalc" />
+    <fragment
+        android:id="@+id/nav_aboutApp"
+        android:name="useful.things.AboutAppFragment"
+        android:label="@string/AboutApp"
+        tools:layout="@layout/fragment_about_app" />
 </navigation>

@@ -39,4 +39,8 @@
     <string name="errenumsyscalc">пожалуйста проверьте правильность ввода всех данных</string>
     <string name="menu_mathformula">Математические формулы</string>
     <string name="menu_phformula">Физические формулы</string>
+    <string name="AboutApp">О приложении</string>
+    <string name="Other">Другое</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="AboutText">" Приложение создано с целью помощи учащимся, а также всем, кто нуждается в таком приложение. Если Вам понравилось данное приложение, Вы всегда можете поддержать разработчика. Спасибо"</string>
 </resources>

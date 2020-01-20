@@ -39,4 +39,10 @@
     <string name="nav_header_title">Useful things</string>
     <string name="divonzero">You can\'t div on zero</string>
     <string name="errenumsyscalc">please check that all data is entered correctly</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="AboutApp">About</string>
+    <string name="Other">Other</string>
+    <string name="AboutText">The app was created to help students, as well as anyone who needs such an app. If you like this app, you can always support the developer. Thanks</string>
 </resources>

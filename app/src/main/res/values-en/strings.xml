@@ -39,4 +39,8 @@
     <string name="errenumsyscalc">please check that all data is entered correctly</string>
     <string name="menu_mathformula">Math formulas</string>
     <string name="menu_phformula">Physical formulas</string>
+    <string name="AboutApp">About</string>
+    <string name="Other">Other</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="AboutText">The app was created to help students, as well as anyone who needs such an app. If you like this app, you can always support the developer. Thanks</string>
 </resources>

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Nothing yet", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_calc, R.id.nav_NumSysConv,
-                R.id.nav_NumSysCalc, R.id.nav_mathformula, R.id.nav_phformula)
+                R.id.nav_NumSysCalc, R.id.nav_mathformula, R.id.nav_phformula, R.id.nav_aboutApp)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -51,9 +51,19 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main2, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+   /* @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.action_settings) {
+            Intent intent = new Intent(this, StartActivity.class);
+            startActivity(intent);
+        }
+        return true;
+    }*/
+
+
 
     @Override
     public boolean onSupportNavigateUp() {
