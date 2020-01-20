@@ -24,16 +24,16 @@
         tools:layout="@layout/fragment_numsysconv" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="useful.things.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_phformula"
+        android:name="useful.things.ui.phformula.phformulaFragment"
+        android:label="@string/menu_phformula"
+        tools:layout="@layout/fragment_phformula" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="useful.things.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        android:id="@+id/nav_mathformula"
+        android:name="useful.things.ui.mathformula.mathformulaFragment"
+        android:label="@string/menu_mathformula"
+        tools:layout="@layout/fragment_mathformula" />
 
     <fragment
         android:id="@+id/nav_NumSysCalc"

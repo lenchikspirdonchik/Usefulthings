@@ -36,4 +36,7 @@
     <string name="nav_header_title">Полезные вещи</string>
     <string name="nav_header_subtitle">by Spiridonov prod.</string>
     <string name="divonzero">На ноль делить нельзя, дурачек</string>
+    <string name="errenumsyscalc">пожалуйста проверьте правильность ввода всех данных</string>
+    <string name="menu_mathformula">Математические формулы</string>
+    <string name="menu_phformula">Физические формулы</string>
 </resources>

@@ -1,6 +1,7 @@
 package useful.things;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.math.BigInteger;
 
 // binary  decimal   hexadecimal  octal
@@ -53,7 +54,7 @@ public  class NumSysConvension extends AppCompatActivity {
 
             case "octal":
                 try {
-                    dec = new BigInteger(new BigInteger(String.valueOf(Integer.parseInt(number))).toString(8), 2);
+                    dec = new BigInteger(new BigInteger(String.valueOf(Integer.parseInt(number))).toString(10), 8);
                     switch (out) {
                         case "binary": return Integer.toBinaryString(Integer.parseInt(number));
                         case "decimal": return (dec.toString());

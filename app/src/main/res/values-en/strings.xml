@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Useful things</string>
+    <string name="app_name">useful things</string>
     <string name="Button_calculator">Calculator</string>
     <string name="buttonHexDec">numeral system</string>
     <string name="Button_calcFormula">calculation by formulas</string>
@@ -36,4 +36,7 @@
     <string name="nav_header_subtitle">by Spiridonov prod.</string>
     <string name="nav_header_title" translatable="false">Useful things</string>
     <string name="divonzero">You can\'t div on zero</string>
+    <string name="errenumsyscalc">please check that all data is entered correctly</string>
+    <string name="menu_mathformula">Math formulas</string>
+    <string name="menu_phformula">Physical formulas</string>
 </resources>

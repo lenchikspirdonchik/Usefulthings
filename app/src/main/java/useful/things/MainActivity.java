@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_calc, R.id.nav_NumSysConv,
-                R.id.nav_NumSysCalc, R.id.nav_share, R.id.nav_tools)
+                R.id.nav_NumSysCalc, R.id.nav_mathformula, R.id.nav_phformula)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

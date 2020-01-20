@@ -39,13 +39,13 @@
         <item android:title="@string/Button_calcFormula" >
             <menu>
                 <item
-                    android:id="@+id/nav_Mathformula"
+                    android:id="@+id/nav_mathformula"
                     android:icon="@drawable/ic_menu_share"
-                    android:title="math formula" />
+                    android:title="@string/menu_mathformula" />
                 <item
-                    android:id="@+id/nav_PhFormula"
+                    android:id="@+id/nav_phformula"
                     android:icon="@drawable/ic_menu_send"
-                    android:title="physics formula" />
+                    android:title="@string/menu_phformula" />
             </menu>
         </item>
     </group>

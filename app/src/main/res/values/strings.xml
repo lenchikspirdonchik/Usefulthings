@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Useful things</string>
+    <string name="app_name">useful things</string>
     <string name="Button_calculator">Calculator</string>
     <string name="buttonHexDec">numeral system</string>
     <string name="Button_calcFormula">calculation by formulas</string>
@@ -32,11 +32,11 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_calc">Calculator</string>
-    <string name="menu_slideshow" translatable="false">Slideshow</string>
-    <string name="menu_tools" translatable="false">Tools</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_phformula">Physical formulas</string>
+    <string name="menu_mathformula">Math formulas</string>
     <string name="menu_numsyscalc">Calculation of number systems</string>
     <string name="menu_numsysconv">Just conversion</string>
     <string name="nav_header_title">Useful things</string>
     <string name="divonzero">You can\'t div on zero</string>
+    <string name="errenumsyscalc">please check that all data is entered correctly</string>
 </resources>
