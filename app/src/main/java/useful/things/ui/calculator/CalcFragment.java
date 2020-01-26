@@ -15,10 +15,11 @@ import androidx.lifecycle.ViewModelProviders;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
+import useful.things.Calc;
 import useful.things.R;
 public class CalcFragment extends Fragment {
     TextView txt;
-    Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar;
+    Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar, rightbr, leftbr;
     char opt = ' ';
     boolean go = true, addWrite = true;
     double val = 0;
@@ -48,12 +49,16 @@ public class CalcFragment extends Fragment {
         b0 = (Button) root.findViewById(R.id.btn_0);
         b00 = (Button) root.findViewById(R.id.btn_00);
         bpoint = (Button) root.findViewById(R.id.btn_point);
+        rightbr = (Button) root.findViewById(R.id.rightBr);
+        leftbr = (Button) root.findViewById(R.id.leftBr);
         ArrayList<Button> buttonArrayList = new ArrayList<>();
         ArrayList<Button> buttonactionArrayList = new ArrayList<>();
         buttonactionArrayList.add(bplus);
         buttonactionArrayList.add(bminus);
         buttonactionArrayList.add(bmulti);
         buttonactionArrayList.add(bdiv);
+        buttonactionArrayList.add(rightbr);
+        buttonactionArrayList.add(leftbr);
         buttonArrayList.add(b1);
         buttonArrayList.add(b2);
         buttonArrayList.add(b3);
@@ -117,43 +122,20 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
-                if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
-                    if (go) {
-                        val = calc(val, txt.getText().toString(), opt);
-                        if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) txt.setText(String.valueOf((int) val));
-                        else txt.setText(String.valueOf(val));
-                        opt = calculatbtn.getText().toString().charAt(0);
-                        go = false;
-                        addWrite = false;
-                    } else {
-                        opt = calculatbtn.getText().toString().charAt(0);
-                        txt.setText(String.valueOf((int) val));
-                    }
+                txt.setText(txt.getText() + ((Button) v).getText().toString());
             }
         };
 
         bpoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (addWrite) txt.setText(txt.getText().toString() + ".");
-                else {
-                    txt.setText("0.");
-                    addWrite = true;
-                }
-                go = true;
+                txt.setText(txt.getText().toString() + ".");
             }
         });
         bequel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Pattern.matches("([-]?\\d+[.]\\d*)|(\\d+)", txt.getText().toString()))
-                    if (go) {
-                        val = calc(val, txt.getText().toString(), opt);
-                        if (Pattern.matches("[-]?[\\d]+[.][0]*", String.valueOf(val))) txt.setText(String.valueOf((int) val));
-                        else txt.setText(String.valueOf(val));
-                        opt = '=';
-                        addWrite = false;
-                    }
+                txt.setText(Calc.Ideone.Calc(txt.getText().toString()));
             }
         });
         for (Button haha : buttonArrayList

@@ -49,10 +49,10 @@
         </LinearLayout>
 
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="4"
-            android:layout_gravity="center" >
+            android:layout_gravity="center"
+            android:columnCount="4">
 
             <Button
                 android:id="@+id/delete"
@@ -63,15 +63,18 @@
             <Button
                 android:id="@+id/delonechar"
                 android:layout_width="100dp"
-
                 android:text="@string/delonechar"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/percent"
+                android:layout_width="100dp"
+                android:text="%"
                 android:textSize="13dp" />
 
             <Button
                 android:id="@+id/division"
                 android:layout_width="100dp"
-                android:layout_column="3"
-
                 android:text="/" />
 
             <Button
@@ -143,10 +146,8 @@
             <Button
                 android:id="@+id/plus"
                 android:layout_width="100dp"
-                android:layout_rowSpan="3"
-                android:layout_gravity="fill"
-
                 android:text="+" />
+
 
             <Button
                 android:id="@+id/btn_0"
@@ -165,7 +166,6 @@
             <Button
                 android:id="@+id/btn_point"
                 android:layout_width="100dp"
-
                 android:text="." />
 
             <Button
@@ -173,8 +173,17 @@
                 android:layout_width="100dp"
                 android:layout_columnSpan="2"
                 android:layout_gravity="fill"
-
                 android:text="=" />
+
+            <Button
+                android:id="@+id/rightBr"
+                android:layout_width="100dp"
+                android:text="(" />
+
+            <Button
+                android:id="@+id/leftBr"
+                android:layout_width="100dp"
+                android:text=")" />
 
         </GridLayout>
     </LinearLayout>
