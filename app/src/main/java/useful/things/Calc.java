@@ -132,12 +132,7 @@ public class Calc extends AppCompatActivity {
             ExpressionParser n = new ExpressionParser();
             List<String> expression = n.parse(s);
             boolean flag = n.flag;
-            if (flag) {
-                for (String x : expression) //System.out.print(x + " ");
-                    //System.out.println();
-                    //System.out.println(calc(expression));
-                    return (calc(expression).toString());
-            }
+            if (flag) return (calc(expression).toString());
             return "E";
         }
     }

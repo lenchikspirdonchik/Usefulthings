@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mult_formulas"
+            android:icon="@drawable/calculator"
+            android:onClick="blabla"
+            android:title="@string/mult_formulas" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_quad_equation"
+            android:icon="@drawable/calculator"
+            android:title="@string/Quadratic_equation" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_trigonometry"
+            android:icon="@drawable/calculator"
+            android:title="@string/Trigonometry" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_triangles"
+            android:icon="@drawable/calculator"
+            android:title="@string/Triangles" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_areaofshapes"
+            android:icon="@drawable/calculator"
+            android:title="@string/Areaofshapes" />
+    </group>
+
+
+</menu>

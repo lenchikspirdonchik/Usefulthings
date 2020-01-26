@@ -122,7 +122,7 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
-                txt.setText(txt.getText() + ((Button) v).getText().toString());
+                txt.setText(txt.getText() + calculatbtn.getText().toString());
             }
         };
 

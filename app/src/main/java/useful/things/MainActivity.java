@@ -1,7 +1,9 @@
 package useful.things;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -53,14 +55,16 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-   /* @Override
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.action_settings) {
-            Intent intent = new Intent(this, StartActivity.class);
+            Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
+            return true;
         }
-        return true;
-    }*/
+        return false;
+    }
 
 
 

@@ -43,4 +43,22 @@
     <string name="Other">Другое</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="AboutText">" Приложение создано с целью помощи учащимся, а также всем, кто нуждается в таком приложение. Если Вам понравилось данное приложение, Вы всегда можете поддержать разработчика. Спасибо"</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="attachment_summary_on">"Automatically download attachments for incoming emails     "</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="messages_header">Сообщения</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="signature_title">Ваша подпись</string>
+    <string name="sync_header">Обновление</string>
+    <string name="sync_title">Sync email periodically</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_main_math_formula">MainMathFormulaActivity</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="mult_formulas">формулы сокращенного умножения</string>
+    <string name="Trigonometry">Тригонометрия</string>
+    <string name="Progressions">Прогрессии</string>
+    <string name="Quadratic_equation">Квадратные уравнения</string>
+    <string name="Triangles">Треугольники</string>
+    <string name="Areaofshapes">Площади фигур</string>
 </resources>
