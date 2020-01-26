@@ -73,14 +73,14 @@
                     android:text="" />
 
                 <Button
-                    android:id="@+id/a23"
+                    android:id="@+id/rightBr"
                     android:layout_width="80dp"
-                    android:text="" />
+                    android:text="(" />
 
                 <Button
-                    android:id="@+id/a3"
+                    android:id="@+id/leftBr"
                     android:layout_width="80dp"
-                    android:text="" />
+                    android:text=")" />
 
                 <Button
                     android:id="@+id/a4"
