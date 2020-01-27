@@ -2,92 +2,83 @@ package useful.things.ui.mathformula;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.PopupMenu;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import useful.things.R;
 
-public class mathformulaFragment extends Fragment {
+import static android.R.layout.simple_spinner_dropdown_item;
 
-    private ShareViewModel shareViewModel;
+public class mathformulaFragment extends Fragment {
+    Spinner spinmain, spformula;
+    String[] data = new String[5];
+    String[] data2 = new String[5];
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_calc, container, false);
-        shareViewModel = ViewModelProviders.of(this).get(ShareViewModel.class);
-        //View menuItemView = getView().findViewById(R.menu.activity_mathformula_drawer);
-        PopupMenu popupMenu = new PopupMenu(getActivity(), root);
-        popupMenu.getMenuInflater().inflate(R.menu.activity_mathformula_drawer, popupMenu.getMenu());
+        final View root = inflater.inflate(R.layout.fragment_mathformula, container, false);
+        spinmain = (Spinner) root.findViewById(R.id.spinmain);
+        spformula = (Spinner) root.findViewById(R.id.spinformula);
+        data[0] = getString(R.string.mult_formulas);
+        data[1] = getString(R.string.Quadratic_equation);
+        data[2] = getString(R.string.Trigonometry);
+        data[3] = getString(R.string.Triangles);
+        data[4] = getString(R.string.Areaofshapes);
+        data2[0] = getString(R.string.square_sum);
+        data2[1] = getString(R.string.Squared_difference);
+        data2[2] = getString(R.string.Difference_squares);
 
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, data);
+        adapter.setDropDownViewResource(simple_spinner_dropdown_item);
+        spinmain.setAdapter(adapter);
 
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+        final ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, data2);
+        adapter2.setDropDownViewResource(simple_spinner_dropdown_item);
+        // spinmain.setAdapter(adapter2);
+
+        spinmain.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.nav_mult_formulas:
-                        Toast.makeText(getActivity(), "nav_mult_formulas", Toast.LENGTH_SHORT).show();
-                        return true;
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                switch (spinmain.getSelectedItemPosition()) {
+                    case 0:
+                        spformula.setAdapter(adapter2);
+                        spformula.setVisibility(View.VISIBLE);
 
-                    case R.id.nav_quad_equation:
-                        Toast.makeText(getActivity(), "nav_quad_equation", Toast.LENGTH_SHORT).show();
-                        return true;
 
-                    case R.id.nav_triangles:
-                        Toast.makeText(getActivity(), "nav_triangles", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.nav_areaofshapes:
-                        Toast.makeText(getActivity(), "nav_areaofshapes", Toast.LENGTH_SHORT).show();
-                        return true;
-
-                    case R.id.nav_trigonometry:
-                        Toast.makeText(getActivity(), "nav_trigonometry", Toast.LENGTH_SHORT).show();
-                        return true;
                     default:
-                        return false;
+                        spformula.setVisibility(View.VISIBLE);
+                        break;
                 }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
             }
         });
+
+
+        spformula.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity(), "u're right", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
         return root;
     }
 
-   /* private void showPopupMenu(View v) {
-        PopupMenu popupMenu = new PopupMenu(getContext(), v);
-        popupMenu.inflate(R.menu.activity_mathformula_drawer);
-        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        switch (item.getItemId()) {
-                            case R.id.nav_mult_formulas:
-                                Toast.makeText(getActivity(), "nav_mult_formulas", Toast.LENGTH_SHORT).show();
-                                return true;
 
-                                case R.id.nav_quad_equation:
-                                    Toast.makeText(getActivity(), "nav_quad_equation", Toast.LENGTH_SHORT).show();
-                                return true;
-
-                                case R.id.nav_triangles:
-                                    Toast.makeText(getActivity(), "nav_triangles", Toast.LENGTH_SHORT).show();
-                                return true;
-
-                            case R.id.nav_areaofshapes:
-                                Toast.makeText(getActivity(), "nav_areaofshapes", Toast.LENGTH_SHORT).show();
-                                return true;
-
-                            case R.id.nav_trigonometry:
-                                Toast.makeText(getActivity(), "nav_trigonometry", Toast.LENGTH_SHORT).show();
-                                return true;
-                            default:
-                                return false;
-                        }
-                    }
-                });*/
-
-    
 }

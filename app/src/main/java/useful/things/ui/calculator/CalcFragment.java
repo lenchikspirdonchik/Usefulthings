@@ -75,7 +75,7 @@ public class CalcFragment extends Fragment {
         bdelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txt.setText("");
+                txt.setText(" ");
                 opt = ' ';
                 val = 0;
                 buffer="";
@@ -88,8 +88,8 @@ public class CalcFragment extends Fragment {
                 StringBuilder str2 = new StringBuilder();
                 for (int i = 0; i < (str.length() - 1); i++) str2.append(str.charAt(i));
                 if (str2.toString().equals("")) {
-                    txt.setText("0");
-                    buffer="0";
+                    txt.setText(" ");
+                    buffer = "";
                 }
                 else {
                     txt.setText(str2.toString());

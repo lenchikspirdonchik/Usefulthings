@@ -61,4 +61,7 @@
     <string name="Quadratic_equation">Квадратные уравнения</string>
     <string name="Triangles">Треугольники</string>
     <string name="Areaofshapes">Площади фигур</string>
+    <string name="square_sum">Квадрат суммы</string>
+    <string name="Squared_difference">Квадрат разности</string>
+    <string name="Difference_squares">Разность квадратов</string>
 </resources>

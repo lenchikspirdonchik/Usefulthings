@@ -66,4 +66,7 @@
     <string name="Progressions">Progressions</string>
     <string name="Triangles">Triangles</string>
     <string name="Areaofshapes">Area of shapes</string>
+    <string name="square_sum">The square of the sum</string>
+    <string name="Squared_difference">Squared difference</string>
+    <string name="Difference_squares">Difference of squares</string>
 </resources>
