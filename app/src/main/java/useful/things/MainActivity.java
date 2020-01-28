@@ -62,6 +62,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        if (item.getItemId() == R.id.action_share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Have you seen this cool app yet\nDownload now from Google play\nvk.com/leonid.spiri");
+            sendIntent.putExtra(Intent.EXTRA_COMPONENT_NAME, getResources().getString(R.string.app_name));
+            sendIntent.setType("text/plain");
+
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
+            return true;
+        }
         return false;
     }
 
