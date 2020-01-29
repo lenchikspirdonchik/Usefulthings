@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -19,8 +20,7 @@ import static android.R.layout.simple_spinner_dropdown_item;
 
 public class mathformulaFragment extends Fragment {
     Spinner spinmain, spformula;
-    //String[] data = new String[5];
-    //String[] data2 = new String[5];
+    TextView txtNaz;
     ArrayList<String> data = new ArrayList<>();
     ArrayList<String> data2 = new ArrayList<>();
 
@@ -28,6 +28,7 @@ public class mathformulaFragment extends Fragment {
         final View root = inflater.inflate(R.layout.fragment_mathformula, container, false);
         spinmain = (Spinner) root.findViewById(R.id.spinmain);
         spformula = (Spinner) root.findViewById(R.id.spinformula);
+        txtNaz = (TextView) root.findViewById(R.id.txtNaz);
         data.add(getString(R.string.mult_formulas));
         data.add(getString(R.string.Quadratic_equation));
         data.add(getString(R.string.Trigonometry));
@@ -86,10 +87,13 @@ public class mathformulaFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (spformula.getSelectedItemPosition()) {
                     case 0:
+                        txtNaz.setText(data2.get(0));
                         break;
                     case 1:
+                        txtNaz.setText(data2.get(1));
                         break;
                     case 2:
+                        txtNaz.setText(data2.get(2));
                         break;
                     default:
                         break;
