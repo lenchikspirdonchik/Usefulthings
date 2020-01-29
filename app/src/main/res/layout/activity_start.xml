@@ -4,14 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="#1CD9FF"
     tools:context=".StartActivity">
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:scaleType="fitXY"
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt1"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="204dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="196dp"
+        android:text="Getting things ready"
+        android:textAllCaps="true"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/startscreen" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
