@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="all">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
@@ -11,7 +11,7 @@
     </group>
 
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="all">
         <item
             android:id="@+id/nav_calc"
             android:icon="@drawable/calculator"
@@ -19,9 +19,10 @@
     </group>
 
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="all">
         <item android:title="@string/menu_numsyscalc">
-        <menu>
+            <menu>
+                <group android:checkableBehavior="all">
             <item
                 android:id="@+id/nav_NumSysConv"
                 android:icon="@drawable/ic_action_name"
@@ -30,34 +31,42 @@
                 android:id="@+id/nav_NumSysCalc"
                 android:icon="@drawable/numsyscalc"
                 android:title="@string/popupmenuscnditem" />
+                </group>
         </menu>
     </item>
 </group>
 
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="all">
         <item android:title="@string/Button_calcFormula" >
             <menu>
-                <item
-                    android:id="@+id/nav_mathformula"
-                    android:icon="@drawable/formula"
-                    android:title="@string/menu_mathformula" />
-                <item
-                    android:id="@+id/nav_phformula"
-                    android:icon="@drawable/formula"
-                    android:title="@string/menu_phformula" />
+                <group android:checkableBehavior="all">
+                    <item
+                        android:id="@+id/nav_mathformula"
+                        android:icon="@drawable/formula"
+                        android:title="@string/menu_mathformula" />
+                    <item
+                        android:id="@+id/nav_phformula"
+                        android:icon="@drawable/formula"
+                        android:title="@string/menu_phformula" />
+                </group>
             </menu>
         </item>
     </group>
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="all">
         <item android:title="@string/Other">
             <menu>
-                <item
-                    android:id="@+id/nav_aboutApp"
-                    android:icon="@drawable/aboutapp"
-                    android:title="@string/AboutApp" />
-
+                <group android:checkableBehavior="all">
+                    <item
+                        android:id="@+id/nav_aboutApp"
+                        android:icon="@drawable/aboutapp"
+                        android:title="@string/AboutApp" />
+                    <item
+                        android:id="@+id/nav_backfeed"
+                        android:icon="@drawable/aboutapp"
+                        android:title="@string/backfeed" />
+                </group>
             </menu>
         </item>
     </group>

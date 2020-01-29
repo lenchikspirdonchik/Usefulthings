@@ -31,21 +31,13 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/txt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text=" "
                 android:textColor="@color/colorTextCalculator"
                 android:textSize="40sp" />
         </LinearLayout>
@@ -53,239 +45,218 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
             <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_weight="1"
-                android:columnCount="4">
+                android:columnCount="3">
 
-                <Button
-                    android:id="@+id/a1"
-                    android:layout_width="80dp"
-                    android:text="" />
 
                 <Button
                     android:id="@+id/a2"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/rightBr"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="(" />
 
                 <Button
                     android:id="@+id/leftBr"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text=")" />
 
-                <Button
-                    android:id="@+id/a4"
-                    android:layout_width="80dp"
-                    android:text="" />
 
                 <Button
                     android:id="@+id/a5"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/s7"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
+
 
                 <Button
                     android:id="@+id/dk"
-                    android:layout_width="80dp"
-                    android:text="" />
-
-                <Button
-                    android:id="@+id/dk"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/j"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/f"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
-                    android:id="@+id/hm"
-                    android:layout_width="80dp"
+                    android:id="@+id/fff"
+                    android:layout_width="60dp"
                     android:text="" />
+
 
                 <Button
                     android:id="@+id/hm"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/jh"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/jl"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
-                <Button
-                    android:id="@+id/yuk"
-                    android:layout_width="80dp"
-                    android:text="" />
 
                 <Button
                     android:id="@+id/uk"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/uhk"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
                 <Button
                     android:id="@+id/ukrt"
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:text="" />
 
-                <Button
-                    android:id="@+id/tj"
-                    android:layout_width="80dp"
-                    android:text="" />
 
             </GridLayout>
 
 
             <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_weight="1"
                 android:columnCount="4">
 
                 <Button
                     android:id="@+id/delete"
-                    android:layout_width="100dp"
-                    android:text="@string/del" />
+                    android:layout_width="60dp"
+                    android:text="@string/del"
+                    android:textSize="9dp" />
 
                 <Button
                     android:id="@+id/delonechar"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="@string/delonechar"
-                    android:textSize="13dp" />
+                    android:textSize="6dp" />
 
                 <Button
                     android:id="@+id/percent"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="%"
                     android:textSize="13dp" />
 
                 <Button
                     android:id="@+id/division"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="/" />
 
                 <Button
                     android:id="@+id/btn_1"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="1" />
 
                 <Button
                     android:id="@+id/btn_2"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="2" />
 
                 <Button
                     android:id="@+id/btn_3"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="3" />
 
                 <Button
                     android:id="@+id/multyply"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
 
                     android:text="*" />
 
                 <Button
                     android:id="@+id/btn_4"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="4" />
 
                 <Button
                     android:id="@+id/btn_5"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="5" />
 
                 <Button
                     android:id="@+id/btn_6"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="6" />
 
                 <Button
                     android:id="@+id/minus"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
 
                     android:text="-" />
 
                 <Button
                     android:id="@+id/btn_7"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="7" />
 
                 <Button
                     android:id="@+id/btn_8"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="8" />
 
                 <Button
                     android:id="@+id/btn_9"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:background="@drawable/oval_button"
                     android:text="9" />
 
                 <Button
                     android:id="@+id/plus"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
 
                     android:text="+" />
 
                 <Button
                     android:id="@+id/btn_point"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="." />
 
                 <Button
                     android:id="@+id/btn_0"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="0" />
 
                 <Button
                     android:id="@+id/btn_00"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="00" />
 
 
                 <Button
                     android:id="@+id/equal"
-                    android:layout_width="100dp"
+                    android:layout_width="60dp"
                     android:text="=" />
 
             </GridLayout>

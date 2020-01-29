@@ -45,4 +45,9 @@
         android:name="useful.things.AboutAppFragment"
         android:label="@string/AboutApp"
         tools:layout="@layout/fragment_about_app" />
+    <fragment
+        android:id="@+id/nav_backfeed"
+        android:name="useful.things.nav_backfeed"
+        android:label="@string/backfeed"
+        tools:layout="@layout/fragment_feedback" />
 </navigation>

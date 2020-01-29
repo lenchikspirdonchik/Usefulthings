@@ -64,4 +64,15 @@
     <string name="square_sum">Квадрат суммы</string>
     <string name="Squared_difference">Квадрат разности</string>
     <string name="Difference_squares">Разность квадратов</string>
+    <string name="share">поделиться</string>
+    <string name="count">расчёт</string>
+    <string name="answer">ответ</string>
+    <string name="cube_sum">куб суммы</string>
+    <string name="cube_difference">куб разности</string>
+    <string name="sum_cubes">сумма кубов</string>
+    <string name="discriminant">дискриминант</string>
+    <string name="root">корень</string>
+    <string name="root_square_equa">корень квадратного уравнения</string>
+    <string name="no_root">нет корней</string>
+    <string name="backfeed">Обратная связь</string>
 </resources>

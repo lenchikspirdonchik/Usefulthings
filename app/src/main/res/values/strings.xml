@@ -69,4 +69,15 @@
     <string name="square_sum">The square of the sum</string>
     <string name="Squared_difference">Squared difference</string>
     <string name="Difference_squares">Difference of squares</string>
+    <string name="share">share</string>
+    <string name="count">count</string>
+    <string name="answer">answer</string>
+    <string name="cube_sum">the cube of the sum</string>
+    <string name="cube_difference">cube of a difference</string>
+    <string name="sum_cubes">sum of cubes</string>
+    <string name="discriminant">discriminant</string>
+    <string name="root">root</string>
+    <string name="root_square_equa">root of the square equation</string>
+    <string name="no_root">no roots</string>
+    <string name="backfeed">backfeed</string>
 </resources>
