@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#2D739B</color>
-    <color name="colorPrimaryDark">#4081A7</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#FF3D00</color>
+    <color name="colorPrimaryDark">#C4B864</color>
+    <color name="colorAccent">#FF1744</color>
     <color name="colorMainBackground">#64C7FF</color>
     <color name="colorTextCalculator">#FFA201</color>
     <color name="colorTextmain">#3248CE</color>
     <color name="colorTexBackgroundtmain">#FF9800</color>
     <color name="colorvvodTextNumSys">#FF9800</color>
     <color name="gray">#444440</color>
+    <color name="actstart">#1CD9FF</color>
+    <color name="acthome">#1CFFC9</color>
+    <color name="actmathformula">#96FF1C</color>
+    <color name="actnumsyscalc">#CFFF1C</color>
+    <color name="actnumsysconv">#CFFF1C</color>
+    <color name="actphformula">#FFC300</color>
+    <color name="actcalc">#066EAC</color>
+    <color name="actfeedback">#3E06AC</color>
+    <color name="actbiology">#bfb834</color>
+
+
 </resources>

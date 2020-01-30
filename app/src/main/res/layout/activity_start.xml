@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1CD9FF"
+    android:background="@color/actstart"
     tools:context=".StartActivity">
 
     <TextView

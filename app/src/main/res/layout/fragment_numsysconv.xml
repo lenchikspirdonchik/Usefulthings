@@ -2,16 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/numsysscreen" />
+    android:layout_height="match_parent"
+    android:background="@color/actnumsysconv">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,9 +31,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="@string/VvodNextNumSys"
                 android:inputType="textPersonName"
                 android:paddingTop="10dp"
-                android:hint="@string/VvodNextNumSys"
                 android:textAllCaps="true"
                 android:textColor="@color/colorvvodTextNumSys"
                 android:textSize="30sp"
@@ -100,42 +92,54 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtotvet"
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorvvodTextNumSys"
-                android:textIsSelectable="true"
-                android:textSize="24sp"
-                android:textStyle="normal|italic" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/txt0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorvvodTextNumSys"
-                android:textSize="24sp"
-                android:textStyle="normal|italic" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txt1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_green_dark"
-                android:textIsSelectable="true"
-                android:textSize="24sp"
-                android:textStyle="normal|italic" />
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp"
+                        android:textStyle="normal|italic" />
 
-            <TextView
-                android:id="@+id/txt2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/holo_red_dark"
-                android:textIsSelectable="true"
-                android:textSize="24sp"
-                android:textStyle="normal|italic" />
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp"
+                        android:textStyle="normal|italic" />
+
+                    <TextView
+                        android:id="@+id/txtotvet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorvvodTextNumSys"
+                        android:textIsSelectable="true"
+                        android:textSize="24sp"
+                        android:textStyle="normal|italic" />
+
+                    <TextView
+                        android:id="@+id/txt0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorvvodTextNumSys"
+                        android:textSize="24sp"
+                        android:textStyle="normal|italic" />
+                </LinearLayout>
+            </ScrollView>
 
         </LinearLayout>
 
-    </LinearLayout>v
+    </LinearLayout>
+    v
 </androidx.constraintlayout.widget.ConstraintLayout>

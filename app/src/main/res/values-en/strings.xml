@@ -42,7 +42,7 @@
     <string name="AboutApp">About</string>
     <string name="Other">Other</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="AboutText">The app was created to help students, as well as anyone who needs such an app. If you like this app, you can always support the developer. Thanks</string>
+    <string name="AboutText">The app was created to help students, as well as anyone who needs such an app. If you like this app, you can always support the developer and share this app. Thanks!</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="attachment_summary_on">"Automatically download attachments for incoming emails     "</string>
     <string name="attachment_title">Download incoming attachments</string>
@@ -75,4 +75,26 @@
     <string name="root_square_equa">root of the square equation</string>
     <string name="no_root">no roots</string>
     <string name="backfeed">backfeed</string>
+    <string name="visa_card">Card number: 4274 3200 2700 0226 Sberbank</string>
+    <string name="txt_copy">Text Copied</string>
+    <string name="press_copy_txt">click to copy the card number</string>
+    <string name="txt_backfeed">you can leave a review at the link</string>
+    <string name="bio_code">genetic code</string>
+    <string name="biology">Biology</string>
+    <string name="bio_task">solving tasks in biology based on the genetic code. You should enter the upper meaning chain 5-3 in the format XXX-XXX-XXX-XXX-XXX, as well as the number of the triplet from the 5 end</string>
+    <string name="up_chain">upper chain</string>
+    <string name="triplet">triplet</string>
+    <string name="txt_home">"You are in the Useful things app. Here you can find a lot of cool and useful sections that will help you in your studies. Currently available:
+
+        mathematical calculator
+
+        translation to different number systems.  ((Enter the number first, then the system)
+
+        calculator of different number systems. (First enter the numbers, then their number systems, after the operation sign)
+
+        calculation of some formulas in mathematics
+
+        solving the task of biology on the genetic code.
+
+        The dev team will be pleased if you share this app with all your friends and leave a review on google play) Thanks!"</string>
 </resources>

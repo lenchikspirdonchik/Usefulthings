@@ -50,4 +50,9 @@
         android:name="useful.things.nav_backfeed"
         android:label="@string/backfeed"
         tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/nav_biology"
+        android:name="useful.things.BiologyFragment"
+        android:label="@string/bio_code"
+        tools:layout="@layout/fragment_biology" />
 </navigation>

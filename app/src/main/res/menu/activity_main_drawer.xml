@@ -55,6 +55,19 @@
     </group>
 
     <group android:checkableBehavior="all">
+        <item android:title="@string/biology">
+            <menu>
+                <group android:checkableBehavior="all">
+                    <item
+                        android:id="@+id/nav_biology"
+                        android:icon="@drawable/formula"
+                        android:title="@string/bio_code" />
+                </group>
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="all">
         <item android:title="@string/Other">
             <menu>
                 <group android:checkableBehavior="all">

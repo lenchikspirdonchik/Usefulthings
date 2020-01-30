@@ -42,7 +42,6 @@
     <string name="AboutApp">О приложении</string>
     <string name="Other">Другое</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
-    <string name="AboutText">" Приложение создано с целью помощи учащимся, а также всем, кто нуждается в таком приложение. Если Вам понравилось данное приложение, Вы всегда можете поддержать разработчика. Спасибо"</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="attachment_summary_on">"Automatically download attachments for incoming emails     "</string>
     <string name="attachment_title">Download incoming attachments</string>
@@ -75,4 +74,27 @@
     <string name="root_square_equa">корень квадратного уравнения</string>
     <string name="no_root">нет корней</string>
     <string name="backfeed">Обратная связь</string>
+    <string name="AboutText">Приложение создано с целью помощи учащимся, а также всем, кто нуждается в таком приложение. Если Вам понравилось данное приложение, Вы всегда можете поддержать разработчика и поделиться этим приложением. Спасибо!</string>
+    <string name="visa_card">Номер карты: 4274 3200 2700 0226  Сбербанк</string>
+    <string name="txt_copy">Текст скопирован</string>
+    <string name="press_copy_txt">нажмите чтобы скопировать номер карты</string>
+    <string name="txt_backfeed">оставить отзыв вы можете по ссылке</string>
+    <string name="bio_code">генетический код</string>
+    <string name="biology">Биология</string>
+    <string name="bio_task">"решение задач по биологии на генетический код. Вам следует ввести верхнюю смысловую цепь 5 - 3 в формате ХХХ-ХХХ-ХХХ-ХХХ-ХХХ, а также номер триплета с 5 конца "</string>
+    <string name="triplet">триплет</string>
+    <string name="up_chain">верхняя цепь</string>
+    <string name="txt_home">"Вы находитесь в приложении Useful things. Здесь Вы сможете найти много крутых и нужных разделов, которые помогут Вам в учебе. На данный момент доступны:
+
+        математический калькулятор
+
+        перевод в разные системы счисления.  (Сначала вводиться цифра, затем система)
+
+        калькулятор разных систем счисления. (Сначала вводятся цифры, далее их системы счисления, после знак операции)
+
+        расчет некоторых формул по математики
+
+        решение задачи по биологии на генетический код.
+
+        Команде разработчиков будет приятно, если Вы поделитесь этим приложением со всеми своими друзьями и оставите отзыв в google play) Спасибо! "</string>
 </resources>
