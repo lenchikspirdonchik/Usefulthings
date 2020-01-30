@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.action_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "Have you seen this cool app yet\nDownload now from Google play\nvk.com/leonid.spiri");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.mess_share));
             sendIntent.putExtra(Intent.EXTRA_COMPONENT_NAME, getResources().getString(R.string.app_name));
             sendIntent.setType("text/plain");
 

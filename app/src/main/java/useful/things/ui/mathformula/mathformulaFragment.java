@@ -33,15 +33,15 @@ public class mathformulaFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_mathformula, container, false);
-        spinmain = (Spinner) root.findViewById(R.id.spinmain);
-        spformula = (Spinner) root.findViewById(R.id.spinformula);
-        txtNaz = (TextView) root.findViewById(R.id.txtNaz);
-        txtres = (TextView) root.findViewById(R.id.txtres);
-        txta = (EditText) root.findViewById(R.id.txta);
-        txtb = (EditText) root.findViewById(R.id.txtb);
-        txtc = (EditText) root.findViewById(R.id.txtc);
+        spinmain = root.findViewById(R.id.spinmain);
+        spformula = root.findViewById(R.id.spinformula);
+        txtNaz = root.findViewById(R.id.txtNaz);
+        txtres = root.findViewById(R.id.txtres);
+        txta = root.findViewById(R.id.txta);
+        txtb = root.findViewById(R.id.txtb);
+        txtc = root.findViewById(R.id.txtc);
         //txtd =(EditText)root.findViewById(R.id.txtd);
-        count = (Button) root.findViewById(R.id.btnrachet);
+        count = root.findViewById(R.id.btnrachet);
         data.add(getString(R.string.mult_formulas));
         data.add(getString(R.string.Quadratic_equation));
         data.add(getString(R.string.Trigonometry));
@@ -169,7 +169,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.square_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.square_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                             }
                         });
                         break;
@@ -181,7 +181,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.Squared_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Squared_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                             }
                         });
                         break;
@@ -193,7 +193,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.Difference_squares(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Difference_squares(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                             }
                         });
                         break;
@@ -205,7 +205,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.cube_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                             }
                         });
                         break;
@@ -217,7 +217,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.cube_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                             }
                         });
                         break;
@@ -229,7 +229,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.cube_summ(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_summ(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                             }
                         });
                         break;
@@ -246,7 +246,7 @@ public class mathformulaFragment extends Fragment {
                         count.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + String.valueOf(rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString()))));
+                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString())));
                             }
                         });
                         break;
@@ -260,23 +260,25 @@ public class mathformulaFragment extends Fragment {
                             @Override
                             public void onClick(View v) {
                                 double dic = rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString()));
-                                if (dic > 0) {
+                                if (dic > 0.0) {
                                     txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
-                                            String.valueOf(rachetformul.quad_equa_plus(
+                                            rachetformul.quad_equa_plus(
                                                     Double.parseDouble(txta.getText().toString()),
                                                     Double.parseDouble(txtb.getText().toString()), dic)
                                                     + "\n2 " + getResources().getString(R.string.root) + " " +
-                                                    String.valueOf(rachetformul.quad_equa_minus(
+                                                    rachetformul.quad_equa_minus(
                                                             Double.parseDouble(txta.getText().toString()),
                                                             Double.parseDouble(txtb.getText().toString()), dic
-                                                    ))));
+                                                    ));
                                 }
-                                if (dic == 0) {
+                                if (dic == 0.0) {
                                     txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
-                                            String.valueOf(rachetformul.quad_equa_zero(
+                                            rachetformul.quad_equa_zero(
                                                     Double.parseDouble(txta.getText().toString()),
-                                                    Double.parseDouble(txtb.getText().toString()))));
-                                } else txtres.setText(getResources().getString(R.string.no_root));
+                                                    Double.parseDouble(txtb.getText().toString())));
+                                }
+                                if (dic < 0.0)
+                                    txtres.setText(getResources().getString(R.string.no_root));
                             }
                         });
                         break;
