@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="useful.things"
+    package="useful.spiridonov"
     android:versionCode="30012020">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

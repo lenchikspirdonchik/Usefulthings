@@ -7,52 +7,52 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="useful.things.ui.home.HomeFragment"
+        android:name="useful.spiridonov.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_calc"
-        android:name="useful.things.ui.calculator.CalcFragment"
+        android:name="useful.spiridonov.ui.calculator.CalcFragment"
         android:label="@string/menu_calc"
         tools:layout="@layout/fragment_calc" />
 
     <fragment
         android:id="@+id/nav_NumSysConv"
-        android:name="useful.things.ui.numsysconv.NumSysConvFragment"
+        android:name="useful.spiridonov.ui.numsysconv.NumSysConvFragment"
         android:label="@string/menu_numsysconv"
         tools:layout="@layout/fragment_numsysconv" />
 
     <fragment
         android:id="@+id/nav_phformula"
-        android:name="useful.things.ui.phformula.phformulaFragment"
+        android:name="useful.spiridonov.ui.phformula.phformulaFragment"
         android:label="@string/menu_phformula"
         tools:layout="@layout/fragment_phformula" />
 
     <fragment
         android:id="@+id/nav_mathformula"
-        android:name="useful.things.ui.mathformula.mathformulaFragment"
+        android:name="useful.spiridonov.ui.mathformula.mathformulaFragment"
         android:label="@string/menu_mathformula"
         tools:layout="@layout/fragment_mathformula" />
 
     <fragment
         android:id="@+id/nav_NumSysCalc"
-        android:name="useful.things.ui.numsyscalc.NumSysCalcFragment"
+        android:name="useful.spiridonov.ui.numsyscalc.NumSysCalcFragment"
         android:label="@string/menu_numsyscalc"
         tools:layout="@layout/fragment_numsyscalc" />
     <fragment
         android:id="@+id/nav_aboutApp"
-        android:name="useful.things.AboutAppFragment"
+        android:name="useful.spiridonov.AboutAppFragment"
         android:label="@string/AboutApp"
         tools:layout="@layout/fragment_about_app" />
     <fragment
         android:id="@+id/nav_backfeed"
-        android:name="useful.things.nav_backfeed"
+        android:name="useful.spiridonov.nav_backfeed"
         android:label="@string/backfeed"
         tools:layout="@layout/fragment_feedback" />
     <fragment
         android:id="@+id/nav_biology"
-        android:name="useful.things.BiologyFragment"
+        android:name="useful.spiridonov.BiologyFragment"
         android:label="@string/bio_code"
         tools:layout="@layout/fragment_biology" />
 </navigation>
