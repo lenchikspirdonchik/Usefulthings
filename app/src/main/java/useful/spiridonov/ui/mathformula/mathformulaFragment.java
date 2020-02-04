@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -157,147 +158,153 @@ public class mathformulaFragment extends Fragment {
     }
 
     public void layoutrachet(int spinm, int spinfor) {
-        switch (spinm) {
-            case 0:
-                switch (spinfor) {
-                    case 0:
-                        txtNaz.setText(data2.get(0));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        txtc.setVisibility(View.INVISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.square_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
-                            }
-                        });
-                        break;
-                    case 1:
-                        txtNaz.setText(data2.get(1));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Squared_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
-                            }
-                        });
-                        break;
-                    case 2:
-                        txtNaz.setText(data2.get(2));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Difference_squares(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
-                            }
-                        });
-                        break;
-                    case 3:
-                        txtNaz.setText(data2.get(3));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
-                            }
-                        });
-                        break;
-                    case 4:
-                        txtNaz.setText(data2.get(4));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
-                            }
-                        });
-                        break;
-                    case 5:
-                        txtNaz.setText(data2.get(5));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_summ(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
-                            }
-                        });
-                        break;
-                }
-                break;
-            case 1:
-                switch (spinfor) {
-                    case 0:
-                        txtNaz.setText(data3.get(0));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        txtc.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString())));
-                            }
-                        });
-                        break;
-                    case 1:
-                        txtNaz.setText(data3.get(1));
-                        txta.setVisibility(View.VISIBLE);
-                        txtb.setVisibility(View.VISIBLE);
-                        txtc.setVisibility(View.VISIBLE);
-                        count.setVisibility(View.VISIBLE);
-                        count.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                double dic = rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString()));
-                                if (dic > 0.0) {
-                                    txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
-                                            rachetformul.quad_equa_plus(
-                                                    Double.parseDouble(txta.getText().toString()),
-                                                    Double.parseDouble(txtb.getText().toString()), dic)
-                                                    + "\n2 " + getResources().getString(R.string.root) + " " +
-                                                    rachetformul.quad_equa_minus(
-                                                            Double.parseDouble(txta.getText().toString()),
-                                                            Double.parseDouble(txtb.getText().toString()), dic
-                                                    ));
+        try {
+
+
+            switch (spinm) {
+                case 0:
+                    switch (spinfor) {
+                        case 0:
+                            txtNaz.setText(data2.get(0));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            txtc.setVisibility(View.INVISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.square_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                                 }
-                                if (dic == 0.0) {
-                                    txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
-                                            rachetformul.quad_equa_zero(
-                                                    Double.parseDouble(txta.getText().toString()),
-                                                    Double.parseDouble(txtb.getText().toString())));
+                            });
+                            break;
+                        case 1:
+                            txtNaz.setText(data2.get(1));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Squared_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
                                 }
-                                if (dic < 0.0)
-                                    txtres.setText(getResources().getString(R.string.no_root));
-                            }
-                        });
-                        break;
-                }
-            case 2:
+                            });
+                            break;
+                        case 2:
+                            txtNaz.setText(data2.get(2));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Difference_squares(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                }
+                            });
+                            break;
+                        case 3:
+                            txtNaz.setText(data2.get(3));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                }
+                            });
+                            break;
+                        case 4:
+                            txtNaz.setText(data2.get(4));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                }
+                            });
+                            break;
+                        case 5:
+                            txtNaz.setText(data2.get(5));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_summ(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                }
+                            });
+                            break;
+                    }
+                    break;
+                case 1:
+                    switch (spinfor) {
+                        case 0:
+                            txtNaz.setText(data3.get(0));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            txtc.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString())));
+                                }
+                            });
+                            break;
+                        case 1:
+                            txtNaz.setText(data3.get(1));
+                            txta.setVisibility(View.VISIBLE);
+                            txtb.setVisibility(View.VISIBLE);
+                            txtc.setVisibility(View.VISIBLE);
+                            count.setVisibility(View.VISIBLE);
+                            count.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    double dic = rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString()));
+                                    if (dic > 0.0) {
+                                        txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
+                                                rachetformul.quad_equa_plus(
+                                                        Double.parseDouble(txta.getText().toString()),
+                                                        Double.parseDouble(txtb.getText().toString()), dic)
+                                                + "\n2 " + getResources().getString(R.string.root) + " " +
+                                                rachetformul.quad_equa_minus(
+                                                        Double.parseDouble(txta.getText().toString()),
+                                                        Double.parseDouble(txtb.getText().toString()), dic
+                                                ));
+                                    }
+                                    if (dic == 0.0) {
+                                        txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
+                                                rachetformul.quad_equa_zero(
+                                                        Double.parseDouble(txta.getText().toString()),
+                                                        Double.parseDouble(txtb.getText().toString())));
+                                    }
+                                    if (dic < 0.0)
+                                        txtres.setText(getResources().getString(R.string.no_root));
+                                }
+                            });
+                            break;
+                    }
+                case 2:
 
-                break;
-            case 3:
+                    break;
+                case 3:
 
-                break;
-            case 4:
+                    break;
+                case 4:
 
-                break;
-            case 5:
+                    break;
+                case 5:
 
-                break;
-            default:
+                    break;
+                default:
 
-                break;
+                    break;
+            }
+        } catch (Exception e) {
+            Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
         }
 
     }
