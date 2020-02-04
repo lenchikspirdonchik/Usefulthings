@@ -7,8 +7,8 @@ android {
         applicationId "useful.spiridonov"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 30012021
-        versionName "second"
+        versionCode 30012022
+        versionName "third"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

@@ -102,7 +102,7 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button numbtn = (Button) v;
-                if (ifequal = true) {
+                if (ifequal == true) {
 
 
                 } else {
@@ -127,7 +127,7 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
-                if (ifequal = true) ifequal = false;
+                if (ifequal == true) ifequal = false;
                 txt.setText(txt.getText() + calculatbtn.getText().toString());
 
             }
@@ -142,7 +142,11 @@ public class CalcFragment extends Fragment {
         bequel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                txt.setText(Calc.Ideone.Calc(txt.getText().toString()));
+                String res = Calc.Ideone.Calc(txt.getText().toString());
+                if (res.equals("Infinity"))
+                    Toast.makeText(getActivity(), getResources().getString(R.string.divonzero), Toast.LENGTH_SHORT).show();
+                else txt.setText(res);
+                ifequal = true;
             }
         });
 

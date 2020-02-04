@@ -8,8 +8,8 @@
     <string name="Button_vvodtxtNumSys">Расчёт</string>
     <string name="popupmenufrstitem">Только перевод</string>
     <string name="popupmenuscnditem">Перевод и сложение</string>
-    <string name="decimal">Десячиная система</string>
-    <string name="Octal">Восьмиричная система</string>
+    <string name="decimal">Десятичная система</string>
+    <string name="Octal">Восьмеричная система</string>
     <string name="Hexadecimal">Шестнадцатеричная система</string>
     <string name="whatnumsysis">Выберите вводную систему счисления:</string>
     <string name="Binary">Двоичная система</string>
@@ -35,7 +35,7 @@
     <string name="nav_header_desc" translatable="false">Навигационный заголовок</string>
     <string name="nav_header_title">Полезные вещи</string>
     <string name="nav_header_subtitle">by Spiridonov prod.</string>
-    <string name="divonzero">На ноль делить нельзя, дурачек</string>
+    <string name="divonzero">На ноль делить нельзя, умный человек</string>
     <string name="errenumsyscalc">пожалуйста проверьте правильность ввода всех данных</string>
     <string name="menu_mathformula">Математические формулы</string>
     <string name="menu_phformula">Физические формулы</string>
@@ -74,8 +74,7 @@
     <string name="root_square_equa">корень квадратного уравнения</string>
     <string name="no_root">нет корней</string>
     <string name="backfeed">Обратная связь</string>
-    <string name="AboutText">Приложение создано с целью помощи учащимся, а также всем, кто нуждается в таком приложение. Если Вам понравилось данное приложение, Вы всегда можете поддержать разработчика и поделиться этим приложением. Спасибо!</string>
-    <string name="visa_card">Номер карты: 4274 3200 2700 0226  Сбербанк</string>
+    <string name="AboutText">Приложение создано с целью помощи учащимся, а также всем, кто нуждается в таком приложении. Если Вам понравилось данное приложение, Вы всегда можете поддержать разработчика и поделиться этим приложением. Спасибо!</string>
     <string name="txt_copy">Текст скопирован</string>
     <string name="press_copy_txt">нажмите чтобы скопировать номер карты</string>
     <string name="txt_backfeed">оставить отзыв вы можете по ссылке</string>
@@ -88,7 +87,7 @@
 
         математический калькулятор
 
-        перевод в разные системы счисления.  (Сначала вводиться цифра, затем система)
+        перевод в разные системы счисления.  (Сначала вводится цифра, затем система)
 
         калькулятор разных систем счисления. (Сначала вводятся цифры, далее их системы счисления, после знак операции)
 

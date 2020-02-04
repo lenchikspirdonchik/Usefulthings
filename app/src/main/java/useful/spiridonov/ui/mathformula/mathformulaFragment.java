@@ -159,12 +159,15 @@ public class mathformulaFragment extends Fragment {
 
     public void layoutrachet(int spinm, int spinfor) {
         try {
-
+        } catch (Exception e) {
+            Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+        }
 
             switch (spinm) {
                 case 0:
                     switch (spinfor) {
                         case 0:
+
                             txtNaz.setText(data2.get(0));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -173,11 +176,17 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.square_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.square_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                         case 1:
+
                             txtNaz.setText(data2.get(1));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -185,11 +194,17 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Squared_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Squared_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                         case 2:
+
                             txtNaz.setText(data2.get(2));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -197,11 +212,17 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Difference_squares(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.Difference_squares(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                         case 3:
+
                             txtNaz.setText(data2.get(3));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -209,11 +230,17 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_sum(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                         case 4:
+
                             txtNaz.setText(data2.get(4));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -221,11 +248,17 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_difference(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                         case 5:
+
                             txtNaz.setText(data2.get(5));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -233,15 +266,21 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_summ(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.cube_summ(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                     }
                     break;
                 case 1:
                     switch (spinfor) {
                         case 0:
+
                             txtNaz.setText(data3.get(0));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -250,11 +289,17 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString())));
+                                    try {
+                                        txtres.setText(getResources().getString(R.string.answer) + " " + rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString())));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             });
+
                             break;
                         case 1:
+
                             txtNaz.setText(data3.get(1));
                             txta.setVisibility(View.VISIBLE);
                             txtb.setVisibility(View.VISIBLE);
@@ -263,28 +308,33 @@ public class mathformulaFragment extends Fragment {
                             count.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    double dic = rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString()));
-                                    if (dic > 0.0) {
-                                        txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
-                                                rachetformul.quad_equa_plus(
-                                                        Double.parseDouble(txta.getText().toString()),
-                                                        Double.parseDouble(txtb.getText().toString()), dic)
-                                                + "\n2 " + getResources().getString(R.string.root) + " " +
-                                                rachetformul.quad_equa_minus(
-                                                        Double.parseDouble(txta.getText().toString()),
-                                                        Double.parseDouble(txtb.getText().toString()), dic
-                                                ));
+                                    try {
+                                        double dic = rachetformul.diskemenant(Double.parseDouble(txta.getText().toString()), Double.parseDouble(txtb.getText().toString()), Double.parseDouble(txtc.getText().toString()));
+                                        if (dic > 0.0) {
+                                            txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
+                                                    rachetformul.quad_equa_plus(
+                                                            Double.parseDouble(txta.getText().toString()),
+                                                            Double.parseDouble(txtb.getText().toString()), dic)
+                                                    + "\n2 " + getResources().getString(R.string.root) + " " +
+                                                    rachetformul.quad_equa_minus(
+                                                            Double.parseDouble(txta.getText().toString()),
+                                                            Double.parseDouble(txtb.getText().toString()), dic
+                                                    ));
+                                        }
+                                        if (dic == 0.0) {
+                                            txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
+                                                    rachetformul.quad_equa_zero(
+                                                            Double.parseDouble(txta.getText().toString()),
+                                                            Double.parseDouble(txtb.getText().toString())));
+                                        }
+                                        if (dic < 0.0)
+                                            txtres.setText(getResources().getString(R.string.no_root));
+                                    } catch (NumberFormatException e) {
+                                        Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
                                     }
-                                    if (dic == 0.0) {
-                                        txtres.setText(getResources().getString(R.string.answer) + "\n1 " + getResources().getString(R.string.root) + " " +
-                                                rachetformul.quad_equa_zero(
-                                                        Double.parseDouble(txta.getText().toString()),
-                                                        Double.parseDouble(txtb.getText().toString())));
-                                    }
-                                    if (dic < 0.0)
-                                        txtres.setText(getResources().getString(R.string.no_root));
                                 }
                             });
+
                             break;
                     }
                 case 2:
@@ -303,9 +353,7 @@ public class mathformulaFragment extends Fragment {
 
                     break;
             }
-        } catch (Exception e) {
-            Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
-        }
+
 
     }
 }
