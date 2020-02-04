@@ -21,7 +21,7 @@ public class CalcFragment extends Fragment {
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar, rightbr, leftbr;
     char opt = ' ';
-    boolean go = true, addWrite = true;
+    boolean go = true, addWrite = true, ifequal = false;
     double val = 0;
     String buffer="";
     private CalcViewModel calcViewModel;
@@ -102,19 +102,24 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button numbtn = (Button) v;
-                if (addWrite) {
-                    if (Pattern.matches("[0]*", txt.getText().toString())) {
-                        txt.setText(numbtn.getText().toString());
-                        buffer=(numbtn.getText().toString());
-                    } else {
-                        txt.setText(txt.getText().toString() + numbtn.getText().toString());
-                        buffer=(txt.getText().toString() + numbtn.getText().toString());
-                    }
+                if (ifequal = true) {
+
+
                 } else {
-                    txt.setText(numbtn.getText().toString());
-                    addWrite = true;
+                    if (addWrite) {
+                        if (Pattern.matches("[0]*", txt.getText().toString())) {
+                            txt.setText(numbtn.getText().toString());
+                            buffer = (numbtn.getText().toString());
+                        } else {
+                            txt.setText(txt.getText().toString() + numbtn.getText().toString());
+                            buffer = (txt.getText().toString() + numbtn.getText().toString());
+                        }
+                    } else {
+                        txt.setText(numbtn.getText().toString());
+                        addWrite = true;
+                    }
+                    go = true;
                 }
-                go = true;
             }
         };
 
@@ -122,7 +127,9 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
+                if (ifequal = true) ifequal = false;
                 txt.setText(txt.getText() + calculatbtn.getText().toString());
+
             }
         };
 
@@ -138,6 +145,8 @@ public class CalcFragment extends Fragment {
                 txt.setText(Calc.Ideone.Calc(txt.getText().toString()));
             }
         });
+
+
         for (Button haha : buttonArrayList
         ) {
             haha.setOnClickListener(btnnum);
