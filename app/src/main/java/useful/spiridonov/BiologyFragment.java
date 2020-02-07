@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -78,59 +79,64 @@ public class BiologyFragment extends Fragment {
         View.OnClickListener rach = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int triplet = Integer.parseInt(trip.getText().toString());
-                char[] buff;
-                String[] frstchain = chain.getText().toString().split("-");
-                String[] scndchain = new String[frstchain.length];
-                //тат-цца-ттц-гцц-тга
-                //расчет нижней транскрибируемой цепи:
-                rachet.setText(rachet.getText().toString() + "Нижняя транскрибируемая цепь: ");
-                scndchain = myy(frstchain, scndchain);
-                for (int i = 0; i < scndchain.length; i++) {
-                    if (i == scndchain.length - 1)
-                        rachet.setText(rachet.getText().toString() + scndchain[i] + "\n");
-                    else
-                        rachet.setText(rachet.getText().toString() + scndchain[i] + "-");
-                }
-                rachet.setText(rachet.getText().toString() + "\n");
-
-                //расчет тРНК:
-                String[] tRNK = new String[scndchain.length];
-                scndchain = myy(scndchain, tRNK);
+                try {
+                    int triplet = Integer.parseInt(trip.getText().toString());
+                    char[] buff;
+                    String[] frstchain = chain.getText().toString().split("-");
+                    String[] scndchain = new String[frstchain.length];
+                    //тат-цца-ттц-гцц-тга
+                    //расчет нижней транскрибируемой цепи:
+                    rachet.setText(rachet.getText().toString() + "Нижняя транскрибируемая цепь: ");
 
 
-                //расчет кодона
-                triplet--;
-                buff = new char[tRNK[triplet].length()];
-                rachet.setText(rachet.getText().toString() + "Кодон: ");
-                for (int i = 0; i < buff.length; i++) {
-                    buff[i] = tRNK[triplet].charAt(2 - i);
-                    switch (buff[i]) {
-                        case 'А':
-                            buff[i] = 'У';
-                            break;
-                        case 'Ц':
-                            buff[i] = 'Г';
-                            break;
-                        case 'Г':
-                            buff[i] = 'Ц';
-                            break;
-                        case 'Т':
-                            buff[i] = 'А';
-                            break;
-                        case 'У':
-                            buff[i] = 'А';
-                            break;
-                        default:
-                            buff[i] = 'E';
-                            break;
+                    scndchain = myy(frstchain, scndchain);
+                    for (int i = 0; i < scndchain.length; i++) {
+                        if (i == scndchain.length - 1)
+                            rachet.setText(rachet.getText().toString() + scndchain[i] + "\n");
+                        else
+                            rachet.setText(rachet.getText().toString() + scndchain[i] + "-");
                     }
-                    rachet.setText(rachet.getText().toString() + buff[i]);
-                }
-                rachet.setText(rachet.getText().toString() + "\n");
-                //расчет генетического года по таблице
-                rachet.setText(rachet.getText().toString() + "Аминокислота: " + aminokislota(buff[0], buff[1], buff[2]));
+                    rachet.setText(rachet.getText().toString() + "\n");
 
+                    //расчет тРНК:
+                    String[] tRNK = new String[scndchain.length];
+                    scndchain = myy(scndchain, tRNK);
+
+
+                    //расчет кодона
+                    triplet--;
+                    buff = new char[tRNK[triplet].length()];
+                    rachet.setText(rachet.getText().toString() + "Кодон: ");
+                    for (int i = 0; i < buff.length; i++) {
+                        buff[i] = tRNK[triplet].charAt(2 - i);
+                        switch (buff[i]) {
+                            case 'А':
+                                buff[i] = 'У';
+                                break;
+                            case 'Ц':
+                                buff[i] = 'Г';
+                                break;
+                            case 'Г':
+                                buff[i] = 'Ц';
+                                break;
+                            case 'Т':
+                                buff[i] = 'А';
+                                break;
+                            case 'У':
+                                buff[i] = 'А';
+                                break;
+                            default:
+                                buff[i] = 'E';
+                                break;
+                        }
+                        rachet.setText(rachet.getText().toString() + buff[i]);
+                    }
+                    rachet.setText(rachet.getText().toString() + "\n");
+                    //расчет генетического года по таблице
+                    rachet.setText(rachet.getText().toString() + "Аминокислота: " + aminokislota(buff[0], buff[1], buff[2]));
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getActivity(), getResources().getText(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                }
             }
         };
         btn.setOnClickListener(rach);

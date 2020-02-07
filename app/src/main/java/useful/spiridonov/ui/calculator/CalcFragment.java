@@ -79,6 +79,7 @@ public class CalcFragment extends Fragment {
                 opt = ' ';
                 val = 0;
                 buffer="";
+                ifequal = false;
             }
         });
         bdelonechar.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +104,8 @@ public class CalcFragment extends Fragment {
             public void onClick(View v) {
                 Button numbtn = (Button) v;
                 if (ifequal == true) {
-
+                    txt.setText(numbtn.getText().toString());
+                    ifequal = false;
 
                 } else {
                     if (addWrite) {

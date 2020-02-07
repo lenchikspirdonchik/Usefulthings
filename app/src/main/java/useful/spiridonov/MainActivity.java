@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity {
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.mess_share));
             sendIntent.putExtra(Intent.EXTRA_COMPONENT_NAME, getResources().getString(R.string.app_name));
+            sendIntent.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.mess_share));
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getResources().getString(R.string.mess_share) + "\nhttps://play.google.com/store/apps/details?id=useful.spiridonov");
             sendIntent.setType("text/plain");
-
             Intent shareIntent = Intent.createChooser(sendIntent, null);
             startActivity(shareIntent);
             return true;

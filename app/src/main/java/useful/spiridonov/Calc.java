@@ -50,7 +50,7 @@ public class Calc extends AppCompatActivity {
             while (tokenizer.hasMoreTokens()) {
                 curr = tokenizer.nextToken();
                 if (!tokenizer.hasMoreTokens() && isOperator(curr)) {
-                    System.out.println("Некорректное выражение.");
+                    //System.out.println("Некорректное выражение.");
                     flag = false;
                     return postfix;
                 }
@@ -62,7 +62,7 @@ public class Calc extends AppCompatActivity {
                         while (!stack.peek().equals("(")) {
                             postfix.add(stack.pop());
                             if (stack.isEmpty()) {
-                                System.out.println("Скобки не согласованы.");
+                                // System.out.println("Скобки не согласованы.");
                                 flag = false;
                                 return postfix;
                             }
@@ -93,7 +93,7 @@ public class Calc extends AppCompatActivity {
             while (!stack.isEmpty()) {
                 if (isOperator(stack.peek())) postfix.add(stack.pop());
                 else {
-                    System.out.println("Скобки не согласованы.");
+                    //System.out.println("Скобки не согласованы.");
                     flag = false;
                     return postfix;
                 }
