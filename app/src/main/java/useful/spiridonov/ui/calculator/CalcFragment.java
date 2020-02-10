@@ -17,13 +17,14 @@ import java.util.regex.Pattern;
 
 import useful.spiridonov.Calc;
 import useful.spiridonov.R;
+
 public class CalcFragment extends Fragment {
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar, rightbr, leftbr;
     char opt = ' ';
-    boolean go = true, addWrite = true, ifequal = false;
+    boolean go = true, addWrite = true, ifequal = false, flagaction = false;
     double val = 0;
-    String buffer="";
+    String buffer = "", res = "";
     private CalcViewModel calcViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -78,8 +79,9 @@ public class CalcFragment extends Fragment {
                 txt.setText(" ");
                 opt = ' ';
                 val = 0;
-                buffer="";
+                buffer = "";
                 ifequal = false;
+                flagaction = false;
             }
         });
         bdelonechar.setOnClickListener(new View.OnClickListener() {
@@ -90,11 +92,14 @@ public class CalcFragment extends Fragment {
                 for (int i = 0; i < (str.length() - 1); i++) str2.append(str.charAt(i));
                 if (str2.toString().equals("")) {
                     txt.setText(" ");
-                    buffer = "";
-                }
-                else {
+                    opt = ' ';
+                    val = 0;
+                    buffer = " ";
+                    ifequal = false;
+                    flagaction = false;
+                } else {
                     txt.setText(str2.toString());
-                    buffer=(str2.toString());
+                    buffer = (str2.toString());
                 }
             }
         });
@@ -105,19 +110,21 @@ public class CalcFragment extends Fragment {
                 Button numbtn = (Button) v;
                 if (ifequal == true) {
                     txt.setText(numbtn.getText().toString());
+                    buffer = numbtn.getText().toString();
                     ifequal = false;
 
                 } else {
                     if (addWrite) {
-                        if (Pattern.matches("[0]*", txt.getText().toString())) {
+                        if (Pattern.matches("[0]*", buffer)) {
                             txt.setText(numbtn.getText().toString());
                             buffer = (numbtn.getText().toString());
                         } else {
-                            txt.setText(txt.getText().toString() + numbtn.getText().toString());
-                            buffer = (txt.getText().toString() + numbtn.getText().toString());
+                            buffer = (buffer + numbtn.getText().toString());
+                            txt.setText(buffer);
                         }
                     } else {
                         txt.setText(numbtn.getText().toString());
+                        buffer = numbtn.getText().toString();
                         addWrite = true;
                     }
                     go = true;
@@ -129,9 +136,15 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Button calculatbtn = (Button) v;
-                if (ifequal == true) ifequal = false;
-                txt.setText(txt.getText() + calculatbtn.getText().toString());
-
+                if (ifequal == true) {
+                    ifequal = false;
+                    buffer = res + calculatbtn.getText().toString();
+                    txt.setText(buffer);
+                } else {
+                    buffer = (buffer + calculatbtn.getText().toString());
+                    txt.setText(buffer);
+                }
+                flagaction = true;
             }
         };
 
@@ -139,16 +152,32 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 txt.setText(txt.getText().toString() + ".");
+                buffer = (txt.getText().toString() + ".");
             }
         });
         bequel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String res = Calc.Ideone.Calc(txt.getText().toString());
-                if (res.equals("Infinity"))
-                    Toast.makeText(getActivity(), getResources().getString(R.string.divonzero), Toast.LENGTH_SHORT).show();
-                else txt.setText(res);
-                ifequal = true;
+                if (flagaction == true) {
+                    try {
+                        res = Calc.Ideone.Calc(buffer);
+
+                        if (res.equals("Infinity"))
+                            Toast.makeText(getActivity(), getResources().getString(R.string.divonzero), Toast.LENGTH_SHORT).show();
+                        else {
+                            if (res.equals("E"))
+                                Toast.makeText(getActivity(), getResources().getString(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                            else {
+                                buffer = res;
+                                txt.setText(txt.getText().toString() + "=" + res);
+                            }
+                        }
+                        ifequal = true;
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), getResources().getString(R.string.errenumsyscalc), Toast.LENGTH_SHORT).show();
+                    }
+                }
+                flagaction = false;
             }
         });
 
@@ -161,24 +190,6 @@ public class CalcFragment extends Fragment {
         ) {
             hoho.setOnClickListener(btncalculat);
         }
-
         return root;
-    }
-
-    public double calc(double x, String input, char opt) {
-        double y = Double.parseDouble(input);
-        switch (opt){
-            case '+':return x + y;
-            case '-':return x - y;
-            case '*':return x * y;
-            case '/':
-                if (y==0) {
-                    Toast.makeText(getActivity(), getString(R.string.divonzero), Toast.LENGTH_SHORT).show();
-                    return 0;
-                }
-                else return x / y;
-            case '%':return x % y;
-            default:return y;
-        }
     }
 }
