@@ -1,5 +1,7 @@
 package useful.spiridonov.ui.calculator;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,15 +23,18 @@ import useful.spiridonov.R;
 public class CalcFragment extends Fragment {
     TextView txt;
     Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, b00, bpoint, bplus, bminus, bmulti, bdiv, bequel, bdelete, bdelonechar, rightbr, leftbr;
-    char opt = ' ';
     boolean go = true, addWrite = true, ifequal = false, flagaction = false;
-    double val = 0;
+    static final String KEY_BUFFER = "buffer", KEY_RES = "res", KEY_TXT = "textview", KEY_GO = "go", KEY_ADDWRITE = "addwrite",
+            KEY_IFEQUAL = "ifequal", KEY_FLAGACTION = "flagaction", KEY_VAL = "val", KEY_OPT = "opt";
     String buffer = "", res = "";
     private CalcViewModel calcViewModel;
+    float val = 0;
+    private SharedPreferences msp;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         calcViewModel = ViewModelProviders.of(this).get(CalcViewModel.class);
         View root = inflater.inflate(R.layout.fragment_calc, container, false);
+        msp = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
         txt = root.findViewById(R.id.txt);
         bplus = root.findViewById(R.id.plus);
         bminus = root.findViewById(R.id.minus);
@@ -77,7 +82,7 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 txt.setText(" ");
-                opt = ' ';
+
                 val = 0;
                 buffer = "";
                 ifequal = false;
@@ -92,7 +97,7 @@ public class CalcFragment extends Fragment {
                 for (int i = 0; i < (str.length() - 1); i++) str2.append(str.charAt(i));
                 if (str2.toString().equals("")) {
                     txt.setText(" ");
-                    opt = ' ';
+
                     val = 0;
                     buffer = " ";
                     ifequal = false;
@@ -191,5 +196,36 @@ public class CalcFragment extends Fragment {
             hoho.setOnClickListener(btncalculat);
         }
         return root;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        SharedPreferences.Editor editor = msp.edit();
+        editor.putString(KEY_BUFFER, buffer);
+        editor.putString(KEY_RES, res);
+        editor.putString(KEY_TXT, txt.getText().toString());
+
+        editor.putBoolean(KEY_GO, go);
+        editor.putBoolean(KEY_IFEQUAL, ifequal);
+        editor.putBoolean(KEY_FLAGACTION, flagaction);
+
+        editor.putFloat(KEY_VAL, val);
+
+        editor.apply();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (msp.contains(KEY_BUFFER)) buffer = msp.getString(KEY_BUFFER, "");
+        if (msp.contains(KEY_RES)) res = msp.getString(KEY_RES, "");
+        if (msp.contains(KEY_TXT)) txt.setText(msp.getString(KEY_TXT, ""));
+
+        if (msp.contains(KEY_GO)) go = msp.getBoolean(KEY_GO, true);
+        if (msp.contains(KEY_IFEQUAL)) ifequal = msp.getBoolean(KEY_IFEQUAL, true);
+        if (msp.contains(KEY_FLAGACTION)) flagaction = msp.getBoolean(KEY_FLAGACTION, true);
+
+        if (msp.contains(KEY_VAL)) val = msp.getFloat(KEY_VAL, 0);
     }
 }

@@ -75,7 +75,6 @@ public class BiologyFragment extends Fragment {
         rachet = root.findViewById(R.id.txtrachet);
         Button btn = root.findViewById(R.id.btn_rachet);
 
-
         View.OnClickListener rach = new View.OnClickListener() {
             @Override
             public void onClick(View v) {

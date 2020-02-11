@@ -43,7 +43,6 @@
                     android:id="@+id/imageView"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:contentDescription="@string/nav_header_desc"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     app:srcCompat="@drawable/icon2" />
 
@@ -51,7 +50,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="@string/nav_header_title"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@color/colorTexBackgroundtmain"
                     android:textSize="20dp" />
@@ -61,8 +59,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/nav_header_subtitle"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp" />
+                    android:textColor="#3D5AFE"
+                    android:textSize="24sp"
+                    android:textStyle="normal|bold|italic" />
             </LinearLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>

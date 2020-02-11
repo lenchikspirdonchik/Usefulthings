@@ -32,16 +32,13 @@
     <string name="menu_numsysconv">Just conversion</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="nav_header_subtitle">by Spiridonov prod.</string>
-    <string name="nav_header_title" translatable="false">Useful things</string>
     <string name="divonzero">You can\'t div on zero</string>
     <string name="errenumsyscalc">please check that all data is entered correctly</string>
     <string name="menu_mathformula">Math formulas</string>
     <string name="menu_phformula">Physical formulas</string>
     <string name="AboutApp">About</string>
     <string name="Other">Other</string>
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="AboutText">The app was created to help students, as well as anyone who needs such an app. If you like this app, you can always support the developer and share this app. Thanks!</string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="attachment_summary_on">"Automatically download attachments for incoming emails     "</string>
@@ -51,9 +48,6 @@
     <string name="signature_title">Your signature</string>
     <string name="sync_header">Sync</string>
     <string name="sync_title">Sync email periodically</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="title_activity_main_math_formula">MainMathFormulaActivity</string>
     <string name="title_activity_settings">Settings</string>
     <string name="mult_formulas">abbreviated multiplication formulas</string>
     <string name="Quadratic_equation">Quadratic equation</string>
