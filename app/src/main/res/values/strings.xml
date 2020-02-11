@@ -102,4 +102,8 @@
 
         The dev team will be pleased if you share this app with all your friends and leave a review on google play) Thanks!</string>
     <string name="mess_share">Have you seen the new study app yet?</string>
+    <string name="nav_convertor">Convertor</string>
+    <string name="lenght">lenght</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
 </resources>

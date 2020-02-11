@@ -35,7 +35,7 @@ public class mathformulaFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View root = inflater.inflate(R.layout.fragment_mathformula, container, false);
         spinmain = root.findViewById(R.id.spinmain);
-        spformula = root.findViewById(R.id.spinformula);
+        spformula = root.findViewById(R.id.spinone);
         txtNaz = root.findViewById(R.id.txtNaz);
         txtres = root.findViewById(R.id.txtres);
         txta = root.findViewById(R.id.txta);

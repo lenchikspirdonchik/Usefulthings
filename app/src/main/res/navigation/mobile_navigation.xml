@@ -55,4 +55,9 @@
         android:name="useful.spiridonov.BiologyFragment"
         android:label="@string/bio_code"
         tools:layout="@layout/fragment_biology" />
+    <fragment
+        android:id="@+id/@string/nav_convertor"
+        android:name="useful.spiridonov.nav_convertor"
+        android:label="nav_convertor"
+        tools:layout="@layout/fragment_convertor" />
 </navigation>

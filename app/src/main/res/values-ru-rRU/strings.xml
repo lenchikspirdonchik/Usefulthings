@@ -97,4 +97,8 @@
 
         Команде разработчиков будет приятно, если Вы поделитесь этим приложением со всеми своими друзьями и оставите отзыв в google play) Спасибо! "</string>
     <string name="mess_share">Ты уже видел новое приложение для учебы? Скачай сейчас из Google Play! Useful Things</string>
+    <string name="nav_convertor">Конвертор</string>
+    <string name="lenght">длина</string>
+    <string name="from">из</string>
+    <string name="to">в</string>
 </resources>
