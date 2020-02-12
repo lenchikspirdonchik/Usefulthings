@@ -31,7 +31,7 @@ public class CalcFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_calc, container, false);
-        msp = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        msp = this.getActivity().getSharedPreferences("CalcFragment", Context.MODE_PRIVATE);
         txt = root.findViewById(R.id.txt);
         bplus = root.findViewById(R.id.plus);
         bminus = root.findViewById(R.id.minus);

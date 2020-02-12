@@ -28,7 +28,7 @@ public class NumSysConvFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_numsysconv, container, false);
-        msp = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        msp = this.getActivity().getSharedPreferences("NumSysConvFragment", Context.MODE_PRIVATE);
         vvodtxt = root.findViewById(R.id.vvodtxt);
         txtotvet = root.findViewById(R.id.txtotvet);
         radioGroup = root.findViewById(R.id.radiogroup);

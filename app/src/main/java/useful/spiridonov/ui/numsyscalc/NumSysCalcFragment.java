@@ -21,14 +21,14 @@ public class NumSysCalcFragment extends Fragment {
     EditText vvodtxt1, vvodtxt2;
     RadioGroup radioGroup1, radioGroup2, radioGroup3;
     String numb1, numb2;
-    static final String KEY_TXTVVOD1 = "txtvvod1", KEY_TXTVVOD2 = "txtvvod2", KEY_TXTRES2 = "txtres";
+    static final String KEY_TXTVVOD1 = "txtvvod1", KEY_TXTVVOD2 = "txtvvod2", KEY_TXTRES = "txtres";
     int a, b;
     TextView txtotvet;
     private SharedPreferences msp;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_numsyscalc, container, false);
-        msp = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        msp = this.getActivity().getSharedPreferences("NumSysCalcFragment", Context.MODE_PRIVATE);
         vvodtxt1 = root.findViewById(R.id.vvodtxt1);
         vvodtxt2 = root.findViewById(R.id.vvodtxt2);
         txtotvet = root.findViewById(R.id.txtotvet);
@@ -171,7 +171,7 @@ public class NumSysCalcFragment extends Fragment {
     public void onStop() {
         super.onStop();
         SharedPreferences.Editor editor = msp.edit();
-        editor.putString(KEY_TXTRES2, txtotvet.getText().toString());
+        editor.putString(KEY_TXTRES, txtotvet.getText().toString());
         editor.putString(KEY_TXTVVOD1, vvodtxt1.getText().toString());
         editor.putString(KEY_TXTVVOD2, vvodtxt2.getText().toString());
         editor.apply();
@@ -181,7 +181,7 @@ public class NumSysCalcFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (msp.contains(KEY_TXTRES2)) txtotvet.setText(msp.getString(KEY_TXTRES2, ""));
+        if (msp.contains(KEY_TXTRES)) txtotvet.setText(msp.getString(KEY_TXTRES, ""));
         if (msp.contains(KEY_TXTVVOD1)) vvodtxt1.setText(msp.getString(KEY_TXTVVOD1, ""));
         if (msp.contains(KEY_TXTVVOD2)) vvodtxt2.setText(msp.getString(KEY_TXTVVOD2, ""));
     }

@@ -1,10 +1,13 @@
 package useful.spiridonov;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,7 +15,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 public class BiologyFragment extends Fragment {
-    TextView rachet, trip, chain;
+    static final String KEY_RACHET = "rachet", KEY_TRIP = "trip", KEY_CHAIN = "chain";
+    TextView rachet;
+    EditText trip, chain;
+    Button btn;
+    private SharedPreferences msp;
 
     public static String[] myy(String[] frst, String[] scnd) {
         char[] buff;
@@ -70,14 +77,16 @@ public class BiologyFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_biology, container, false);
+        msp = this.getActivity().getSharedPreferences("BiologyFragment", Context.MODE_PRIVATE);
         chain = root.findViewById(R.id.txt_shain);
         trip = root.findViewById(R.id.txt_triplet);
         rachet = root.findViewById(R.id.txtrachet);
-        Button btn = root.findViewById(R.id.btn_rachet);
+        btn = root.findViewById(R.id.btn_rachet);
 
         View.OnClickListener rach = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rachet.setText("");
                 try {
                     int triplet = Integer.parseInt(trip.getText().toString());
                     char[] buff;
@@ -140,5 +149,24 @@ public class BiologyFragment extends Fragment {
         };
         btn.setOnClickListener(rach);
         return root;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        SharedPreferences.Editor editor = msp.edit();
+        editor.putString(KEY_RACHET, rachet.getText().toString());
+        editor.putString(KEY_TRIP, trip.getText().toString());
+        editor.putString(KEY_CHAIN, chain.getText().toString());
+        editor.apply();
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (msp.contains(KEY_RACHET)) rachet.setText(msp.getString(KEY_RACHET, ""));
+        if (msp.contains(KEY_TRIP)) trip.setText(msp.getString(KEY_TRIP, ""));
+        if (msp.contains(KEY_CHAIN)) chain.setText(msp.getString(KEY_CHAIN, ""));
     }
 }
