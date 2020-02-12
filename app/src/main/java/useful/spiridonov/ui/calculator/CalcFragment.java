@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -27,12 +26,10 @@ public class CalcFragment extends Fragment {
     static final String KEY_BUFFER = "buffer", KEY_RES = "res", KEY_TXT = "textview", KEY_GO = "go", KEY_ADDWRITE = "addwrite",
             KEY_IFEQUAL = "ifequal", KEY_FLAGACTION = "flagaction", KEY_VAL = "val", KEY_OPT = "opt";
     String buffer = "", res = "";
-    private CalcViewModel calcViewModel;
     float val = 0;
     private SharedPreferences msp;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        calcViewModel = ViewModelProviders.of(this).get(CalcViewModel.class);
         View root = inflater.inflate(R.layout.fragment_calc, container, false);
         msp = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
         txt = root.findViewById(R.id.txt);

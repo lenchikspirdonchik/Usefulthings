@@ -235,37 +235,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/txt3"
+                <TextView
+                    android:id="@+id/txtotvet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:inputType="textMultiLine" />
-
-                <EditText
-                    android:id="@+id/txt2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:inputType="textMultiLine" />
-
-                <EditText
-                    android:id="@+id/txt0"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:inputType="textMultiLine" />
-
-                <EditText
-                    android:id="@+id/txt1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:inputType="textMultiLine" />
+                    android:textColor="@color/colorvvodTextNumSys"
+                    android:textIsSelectable="true"
+                    android:textSize="24sp"
+                    android:textStyle="normal|italic" />
             </LinearLayout>
         </ScrollView>
 
