@@ -103,4 +103,11 @@
     <string name="lenght">lenght</string>
     <string name="from">from</string>
     <string name="to">to</string>
+    <string name="millimeter">millimeter</string>
+    <string name="centimeter">centimeter</string>
+    <string name="decimeter">decimeter</string>
+    <string name="meter">meter</string>
+    <string name="kilometer">kilometer</string>
+    <string name="inch">inch</string>
+    <string name="mile">mile</string>
 </resources>

@@ -58,6 +58,6 @@
     <fragment
         android:id="@+id/nav_convertor"
         android:name="useful.spiridonov.nav_convertor"
-        android:label="nav_convertor"
+        android:label="@string/nav_convertor"
         tools:layout="@layout/fragment_convertor" />
 </navigation>

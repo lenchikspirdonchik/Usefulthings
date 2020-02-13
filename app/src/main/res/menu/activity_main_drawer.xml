@@ -18,6 +18,18 @@
             android:title="@string/Button_calculator" />
     </group>
 
+    <group android:checkableBehavior="all">
+        <item android:title="@string/nav_convertor">
+            <menu>
+                <group android:checkableBehavior="all">
+                    <item
+                        android:id="@+id/nav_convertor"
+                        android:icon="@drawable/converter"
+                        android:title="@string/nav_convertor" />
+                </group>
+            </menu>
+        </item>
+    </group>
 
     <group android:checkableBehavior="all">
         <item android:title="@string/menu_numsyscalc">

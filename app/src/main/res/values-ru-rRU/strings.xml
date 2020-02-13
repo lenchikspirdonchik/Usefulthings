@@ -95,4 +95,11 @@
     <string name="lenght">длина</string>
     <string name="from">из</string>
     <string name="to">в</string>
+    <string name="millimeter">миллиметр</string>
+    <string name="centimeter">сантиметр</string>
+    <string name="decimeter">дециметр</string>
+    <string name="meter">метр</string>
+    <string name="kilometer">километр</string>
+    <string name="inch">дюйм</string>
+    <string name="mile">миля</string>
 </resources>
