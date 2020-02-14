@@ -110,4 +110,17 @@
     <string name="kilometer">kilometer</string>
     <string name="inch">inch</string>
     <string name="mile">mile</string>
+    <string name="kilogram">kilogram</string>
+    <string name="gram">gram</string>
+    <string name="ounce">ounce</string>
+    <string name="ton">ton</string>
+    <string name="lbs">lbs</string>
+    <string name="weight">weight</string>
+    <string name="speed">speed</string>
+    <string name="metersecond">meter/second</string>
+    <string name="meterminute">meter/minute</string>
+    <string name="kilometerhour">kilometer/hour</string>
+    <string name="footsecond">foot/second</string>
+    <string name="footminute">foot/minute</string>
+    <string name="foothour">foot/hour</string>
 </resources>

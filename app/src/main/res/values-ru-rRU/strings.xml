@@ -102,4 +102,17 @@
     <string name="kilometer">километр</string>
     <string name="inch">дюйм</string>
     <string name="mile">миля</string>
+    <string name="kilogram">килограмм</string>
+    <string name="gram">грамм</string>
+    <string name="ounce">унция</string>
+    <string name="ton">тонна</string>
+    <string name="lbs">фунт</string>
+    <string name="weight">масса</string>
+    <string name="speed">скорость</string>
+    <string name="metersecond">Метр/секунда</string>
+    <string name="meterminute">Метр/минута</string>
+    <string name="kilometerhour">Километр/час</string>
+    <string name="footsecond">Фут/секунда</string>
+    <string name="footminute">Фут/минута</string>
+    <string name="foothour">Фут/час</string>
 </resources>

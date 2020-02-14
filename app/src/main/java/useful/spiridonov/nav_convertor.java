@@ -27,9 +27,9 @@ public class nav_convertor extends Fragment {
     LinearLayout linervvod;
     ArrayList<String> data = new ArrayList<>();
     ArrayList<String> datalenght = new ArrayList<>();
-    ArrayList<String> data3 = new ArrayList<>();
-    ArrayAdapter<String> adaptermain, adapterlenght;
-    Double[] lenghtarray = new Double[7];
+    ArrayList<String> dataweight = new ArrayList<>();
+    ArrayAdapter<String> adaptermain, adapterlenght, adapterweight;
+    Double[] lenghtarray = new Double[7], weightarray = new Double[5];
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_convertor, container, false);
@@ -39,8 +39,12 @@ public class nav_convertor extends Fragment {
         txtres = root.findViewById(R.id.txtres);
         txtvvod = root.findViewById(R.id.txtvvod);
         linervvod = root.findViewById(R.id.linervvod);
+
         data.add(getString(R.string.nav_convertor));
         data.add(getString(R.string.lenght));
+        data.add(getString(R.string.weight));
+        data.add(getString(R.string.speed));
+
         lenghtarray[0] = 0.001;
         lenghtarray[1] = 0.01;
         lenghtarray[2] = 0.1;
@@ -48,7 +52,6 @@ public class nav_convertor extends Fragment {
         lenghtarray[4] = 1000.0;
         lenghtarray[5] = 0.0254;
         lenghtarray[6] = 1609.344;
-
         datalenght.add(getString(R.string.millimeter));
         datalenght.add(getString(R.string.centimeter));
         datalenght.add(getString(R.string.decimeter));
@@ -56,12 +59,28 @@ public class nav_convertor extends Fragment {
         datalenght.add(getString(R.string.kilometer));
         datalenght.add(getString(R.string.inch));
         datalenght.add(getString(R.string.mile));
+
+        weightarray[0] = 0.001;
+        weightarray[1] = 1.0;
+        weightarray[2] = 1000.0;
+        weightarray[3] = 0.0283495;
+        weightarray[4] = 0.453592;
+        dataweight.add(getString(R.string.gram));
+        dataweight.add(getString(R.string.kilogram));
+        dataweight.add(getString(R.string.ton));
+        dataweight.add(getString(R.string.ounce));
+        dataweight.add(getString(R.string.lbs));
+
+
         adaptermain = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, data);
         adaptermain.setDropDownViewResource(simple_spinner_dropdown_item);
         spinmain.setAdapter(adaptermain);
 
         adapterlenght = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, datalenght);
         adapterlenght.setDropDownViewResource(simple_spinner_dropdown_item);
+
+        adapterweight = new ArrayAdapter<String>(getActivity(), R.layout.support_simple_spinner_dropdown_item, datalenght);
+        adapterweight.setDropDownViewResource(simple_spinner_dropdown_item);
 
         spinmain.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -72,16 +91,16 @@ public class nav_convertor extends Fragment {
                     case 0:
                         break;
                     case 1:
-                        // mainspinner = 1;
+                        mainspinner = 1;
                         spinfrom.setAdapter(adapterlenght);
                         spinto.setAdapter(adapterlenght);
                         linervvod.setVisibility(View.VISIBLE);
                         break;
                     case 2:
-                        // mainspinner = 2;
-                                                /*spinfrom.setAdapter();
-                        spinto.setAdapter();
-                        linervvod.setVisibility(View.VISIBLE);*/
+                        mainspinner = 2;
+                        spinfrom.setAdapter(adapterweight);
+                        spinto.setAdapter(adapterweight);
+                        linervvod.setVisibility(View.VISIBLE);
                         break;
                     case 3:
                         // mainspinner = 3;
@@ -149,9 +168,21 @@ public class nav_convertor extends Fragment {
 
     public void rachet() {
         Double fromspinner, tospinner;
+        Double[] buff;
         try {
-            fromspinner = Double.parseDouble(txtvvod.getText().toString()) * lenghtarray[(int) spinfrom.getSelectedItemId()];
-            tospinner = fromspinner / lenghtarray[(int) spinto.getSelectedItemId()];
+            switch (mainspinner) {
+                case 1:
+                    buff = lenghtarray;
+                    break;
+                case 2:
+                    buff = weightarray;
+                    break;
+                default:
+                    buff = new Double[0];
+            }
+
+            fromspinner = Double.parseDouble(txtvvod.getText().toString()) * buff[(int) spinfrom.getSelectedItemId()];
+            tospinner = fromspinner / buff[(int) spinfrom.getSelectedItemId()];
             txtres.setText(String.format("%10.5f", tospinner));
 
         } catch (Exception e) {
