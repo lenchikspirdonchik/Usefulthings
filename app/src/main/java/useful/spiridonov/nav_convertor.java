@@ -25,7 +25,9 @@ public class nav_convertor extends Fragment {
     EditText txtvvod;
     int mainspinner;
     LinearLayout linervvod;
-    ArrayList<String> data = new ArrayList<>(), datalenght = new ArrayList<>(), dataweight = new ArrayList<>(), dataspeed = new ArrayList<>(), datainfo = new ArrayList<>();
+    ArrayList<String> data = new ArrayList<>(), datalenght = new ArrayList<>(), dataweight = new ArrayList<>(),
+            dataspeed = new ArrayList<>(), datainfo = new ArrayList<>();
+    
     ArrayAdapter<String> adaptermain, adapterlenght, adapterweight, adapterspeed, adapterinfro;
     Double[] lenghtarray = new Double[7], weightarray = new Double[5], speedarray = new Double[5], infoarray = new Double[10];
 
