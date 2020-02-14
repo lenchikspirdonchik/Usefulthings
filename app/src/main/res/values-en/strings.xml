@@ -115,4 +115,17 @@
     <string name="footsecond">foot/second</string>
     <string name="footminute">foot/minute</string>
     <string name="foothour">foot/hour</string>
+    <string name="milehour">mile/hour</string>
+    <string name="knots">knots</string>
+    <string name="bit">bit</string>
+    <string name="bytee">byte</string>
+    <string name="kilobit">kilobit</string>
+    <string name="megabit">megabit</string>
+    <string name="gigabit">gigabit</string>
+    <string name="kilobyte">kilobyte</string>
+    <string name="megabyte">megabyte</string>
+    <string name="gigabyte">gigabyte</string>
+    <string name="terabyte">terabyte</string>
+    <string name="petabyte">petabyte</string>
+    <string name="amount_info">amount of information</string>
 </resources>

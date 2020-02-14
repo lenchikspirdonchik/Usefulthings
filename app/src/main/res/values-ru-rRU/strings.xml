@@ -115,4 +115,17 @@
     <string name="footsecond">Фут/секунда</string>
     <string name="footminute">Фут/минута</string>
     <string name="foothour">Фут/час</string>
+    <string name="milehour">Миля/час</string>
+    <string name="knots">узел</string>
+    <string name="bit">бит</string>
+    <string name="bytee">байт</string>
+    <string name="kilobit">килобит</string>
+    <string name="megabit">мегабит</string>
+    <string name="gigabit">гигабит</string>
+    <string name="kilobyte">килобайт</string>
+    <string name="megabyte">мегабайт</string>
+    <string name="gigabyte">гигабайт</string>
+    <string name="terabyte">терабайт</string>
+    <string name="petabyte">петабайт</string>
+    <string name="amount_info">объем информации</string>
 </resources>
