@@ -154,7 +154,7 @@ public class CalcFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 txt.setText(txt.getText().toString() + ".");
-                buffer = (txt.getText().toString() + ".");
+                buffer = (buffer + ".");
             }
         });
         bequel.setOnClickListener(new View.OnClickListener() {
