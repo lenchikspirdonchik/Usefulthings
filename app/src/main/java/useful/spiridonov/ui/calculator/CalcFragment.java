@@ -155,6 +155,7 @@ public class CalcFragment extends Fragment {
             public void onClick(View v) {
                 txt.setText(txt.getText().toString() + ".");
                 buffer = (buffer + ".");
+
             }
         });
         bequel.setOnClickListener(new View.OnClickListener() {
@@ -182,7 +183,11 @@ public class CalcFragment extends Fragment {
                 flagaction = false;
             }
         });
-
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         for (Button haha : buttonArrayList
         ) {

@@ -3,6 +3,7 @@ package useful.spiridonov;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +29,7 @@ public class StartActivity extends AppCompatActivity {
             }, hoho);
         }
 
-
+        Log.d("Loading", "Images_loaded");
 
 
 
