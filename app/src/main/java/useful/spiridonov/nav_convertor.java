@@ -199,9 +199,9 @@ public class nav_convertor extends Fragment {
         infoarray[4] = 0.000001;
         infoarray[5] = 0.001;
         infoarray[6] = 1.0;
-        infoarray[7] = 1000.0;
-        infoarray[8] = 1000000.0;
-        infoarray[9] = 1000000000.0;
+        infoarray[7] = 1024.0;
+        infoarray[8] = 1024000.0;
+        infoarray[9] = 1024000000.0;
         datainfo.add(getString(R.string.bit));
         datainfo.add(getString(R.string.kilobit));
         datainfo.add(getString(R.string.megabit));

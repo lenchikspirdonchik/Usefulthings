@@ -6,9 +6,9 @@ android {
     defaultConfig {
         applicationId "useful.spiridonov"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 30012024
-        versionName "fifth"
+        targetSdkVersion 30
+        versionCode 30012025
+        versionName "sixth"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
